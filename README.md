@@ -1,0 +1,2 @@
+# LibraryProject
+LibraryProject by AndroidStudio
