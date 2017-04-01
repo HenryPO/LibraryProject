@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="InlinedApi" severity="ignore" />
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/com/mobile/library/utils/StringUtil.java" />
+        <ignore path="src/com/tunynet/library/image/AsyncImageLoader.java" />
+        <ignore path="src/com/tunynet/library/utils/StringUtil.java" />
+    </issue>
+</lint>
