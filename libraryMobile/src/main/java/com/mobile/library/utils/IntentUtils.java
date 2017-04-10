@@ -173,7 +173,7 @@ public class IntentUtils {
 
     /**
      * 获取关机的意图
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.SHUTDOWN"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.SHUTDOWN"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return intent
      */

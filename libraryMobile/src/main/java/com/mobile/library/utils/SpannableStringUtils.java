@@ -108,12 +108,12 @@ public class SpannableStringUtils {
 		 * 设置标识
 		 *
 		 * @param flag
-		 *            <ul>
-		 *            <li>{@link Spanned#SPAN_INCLUSIVE_EXCLUSIVE}</li>
-		 *            <li>{@link Spanned#SPAN_INCLUSIVE_INCLUSIVE}</li>
-		 *            <li>{@link Spanned#SPAN_EXCLUSIVE_EXCLUSIVE}</li>
-		 *            <li>{@link Spanned#SPAN_EXCLUSIVE_INCLUSIVE}</li>
-		 *            </ul>
+		 *            DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Spanned#SPAN_INCLUSIVE_EXCLUSIVE}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Spanned#SPAN_INCLUSIVE_INCLUSIVE}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Spanned#SPAN_EXCLUSIVE_EXCLUSIVE}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Spanned#SPAN_EXCLUSIVE_INCLUSIVE}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);
 		 * @return {@link Builder}
 		 */
 		public Builder setFlag(int flag) {
@@ -288,11 +288,11 @@ public class SpannableStringUtils {
 		 *
 		 * @param fontFamily
 		 *            字体
-		 *            <ul>
-		 *            <li>monospace</li>
-		 *            <li>serif</li>
-		 *            <li>sans-serif</li>
-		 *            </ul>
+		 *            DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);monospaceDataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);serifDataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);sans-serifDataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);
 		 * @return {@link Builder}
 		 */
 		public Builder setFontFamily(String fontFamily) {
@@ -305,11 +305,11 @@ public class SpannableStringUtils {
 		 *
 		 * @param align
 		 *            对其方式
-		 *            <ul>
-		 *            <li>{@link Alignment#ALIGN_NORMAL}正常</li>
-		 *            <li>{@link Alignment#ALIGN_OPPOSITE}相反</li>
-		 *            <li>{@link Alignment#ALIGN_CENTER}居中</li>
-		 *            </ul>
+		 *            DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Alignment#ALIGN_NORMAL}正常DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Alignment#ALIGN_OPPOSITE}相反DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Alignment#ALIGN_CENTER}居中DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);
 		 * @return {@link Builder}
 		 */
 		public Builder setAlign(Alignment align) {
@@ -371,9 +371,9 @@ public class SpannableStringUtils {
 
 		/**
 		 * 设置点击事件
-		 * <p>
+		 *
 		 * 需添加view.setMovementMethod(LinkMovementMethod.getInstance())
-		 * </p>
+		 * DataCacheHelper.getInstance().getUserBean(self);
 		 *
 		 * @param clickSpan
 		 *            点击事件
@@ -386,9 +386,9 @@ public class SpannableStringUtils {
 
 		/**
 		 * 设置超链接
-		 * <p>
+		 *
 		 * 需添加view.setMovementMethod(LinkMovementMethod.getInstance())
-		 * </p>
+		 * DataCacheHelper.getInstance().getUserBean(self);
 		 *
 		 * @param url
 		 *            超链接
@@ -401,23 +401,23 @@ public class SpannableStringUtils {
 
 		/**
 		 * 设置模糊
-		 * <p>
+		 *
 		 * 尚存bug，其他地方存在相同的字体的话，相同字体出现在之前的话那么就不会模糊，出现在之后的话那会一起模糊
-		 * </p>
-		 * <p>
+		 * DataCacheHelper.getInstance().getUserBean(self);
+		 *
 		 * 推荐还是把所有字体都模糊这样使用
-		 * </p>
+		 * DataCacheHelper.getInstance().getUserBean(self);
 		 *
 		 * @param radius
 		 *            模糊半径（需大于0）
 		 * @param style
 		 *            模糊样式
-		 *            <ul>
-		 *            <li>{@link Blur#NORMAL}</li>
-		 *            <li>{@link Blur#SOLID}</li>
-		 *            <li>{@link Blur#OUTER}</li>
-		 *            <li>{@link Blur#INNER}</li>
-		 *            </ul>
+		 *            DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Blur#NORMAL}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Blur#SOLID}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Blur#OUTER}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);{@link Blur#INNER}DataCacheHelper.getInstance().getUserBean(self);
+		 *            DataCacheHelper.getInstance().getUserBean(self);
 		 * @return {@link Builder}
 		 */
 		public Builder setBlur(float radius, Blur style) {

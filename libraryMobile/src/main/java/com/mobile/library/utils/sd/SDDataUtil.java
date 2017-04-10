@@ -22,16 +22,16 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Description sd卡操作类<br>
- * CreateDate 2014-1-10 <br>
+ * Description sd卡操作类DataCacheHelper.getInstance().getUserBean(self);
+ * CreateDate 2014-1-10 DataCacheHelper.getInstance().getUserBean(self);
  *
- * @author LHY <br>
+ * @author LHY DataCacheHelper.getInstance().getUserBean(self);
  */
 public class SDDataUtil {
     /**
      * 判断SD卡是否可用
      *
-     * @return true : 可用<br>false : 不可用
+     * @return true : 可用DataCacheHelper.getInstance().getUserBean(self);false : 不可用
      */
     public static boolean isSDCardEnable() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());

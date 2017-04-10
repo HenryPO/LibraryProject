@@ -62,7 +62,7 @@ public class SizeUtils {
 
     /**
      * 各种单位转换
-     * <p>该方法存在于TypedValue</p>
+     * 该方法存在于TypedValueDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param unit    单位
      * @param value   值
@@ -89,8 +89,8 @@ public class SizeUtils {
 
     /**
      * 在onCreate中获取视图的尺寸
-     * <p>需回调onGetSizeListener接口，在onGetSize中获取view宽高</p>
-     * <p>用法示例如下所示</p>
+     * 需回调onGetSizeListener接口，在onGetSize中获取view宽高DataCacheHelper.getInstance().getUserBean(self);
+     * 用法示例如下所示DataCacheHelper.getInstance().getUserBean(self);
      * <pre>
      * SizeUtils.forceGetViewSize(view, new SizeUtils.onGetSizeListener() {
      *     Override

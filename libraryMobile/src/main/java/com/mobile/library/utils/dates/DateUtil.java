@@ -14,10 +14,10 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /**
- * Description 时间处理类<br>
- * CreateDate 2014-1-10 <br>
+ * Description 时间处理类DataCacheHelper.getInstance().getUserBean(self);
+ * CreateDate 2014-1-10 DataCacheHelper.getInstance().getUserBean(self);
  *
- * @author LHY <br>
+ * @author LHY DataCacheHelper.getInstance().getUserBean(self);
  */
 public class DateUtil {
     private DateUtil() {
@@ -25,142 +25,17 @@ public class DateUtil {
     }
 
     /**
-     * <p>
+     *
      * 在工具类中经常使用到工具类的格式化描述，这个主要是一个日期的操作类，所以日志格式主要使用 SimpleDateFormat的定义格式.
-     * </p>
-     * 格式的意义如下： 日期和时间模式 <br>
-     * <p>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * 格式的意义如下： 日期和时间模式 DataCacheHelper.getInstance().getUserBean(self);
+     *
      * 日期和时间格式由日期和时间模式字符串指定。在日期和时间模式字符串中，未加引号的字母 'A' 到 'Z' 和 'a' 到 'z'
      * 被解释为模式字母，用来表示日期或时间字符串元素。文本可以使用单引号 (') 引起来，以免进行解释。"''"
      * 表示单引号。所有其他字符均不解释；只是在格式化时将它们简单复制到输出字符串，或者在分析时与输入字符串进行匹配。
-     * </p>
-     * 定义了以下模式字母（所有其他字符 'A' 到 'Z' 和 'a' 到 'z' 都被保留）： <br>
-     * <table border="1" cellspacing="1" cellpadding="1" summary="Chart shows
-     * pattern letters, date/time component, presentation, and examples.">
-     * <tr>
-     * <th align="left">字母</th>
-     * <th align="left">日期或时间元素</th>
-     * <th align="left">表示</th>
-     * <th align="left">示例</th>
-     * </tr>
-     * <tr>
-     * <td><code>G</code></td>
-     * <td>Era 标志符</td>
-     * <td>Text</td>
-     * <td><code>AD</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>y</code></td>
-     * <td>年</td>
-     * <td>Year</td>
-     * <td><code>1996</code>; <code>96</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>M</code></td>
-     * <td>年中的月份</td>
-     * <td>Month</td>
-     * <td><code>July</code>; <code>Jul</code>; <code>07</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>w</code></td>
-     * <td>年中的周数</td>
-     * <td>Number</td>
-     * <td><code>27</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>W</code></td>
-     * <td>月份中的周数</td>
-     * <td>Number</td>
-     * <td><code>2</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>D</code></td>
-     * <td>年中的天数</td>
-     * <td>Number</td>
-     * <td><code>189</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>d</code></td>
-     * <td>月份中的天数</td>
-     * <td>Number</td>
-     * <td><code>10</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>F</code></td>
-     * <td>月份中的星期</td>
-     * <td>Number</td>
-     * <td><code>2</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>E</code></td>
-     * <td>星期中的天数</td>
-     * <td>Text</td>
-     * <td><code>Tuesday</code>; <code>Tue</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>a</code></td>
-     * <td>Am/pm 标记</td>
-     * <td>Text</td>
-     * <td><code>PM</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>H</code></td>
-     * <td>一天中的小时数（0-23）</td>
-     * <td>Number</td>
-     * <td><code>0</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>k</code></td>
-     * <td>一天中的小时数（1-24）</td>
-     * <td>Number</td>
-     * <td><code>24</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>K</code></td>
-     * <td>am/pm 中的小时数（0-11）</td>
-     * <td>Number</td>
-     * <td><code>0</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>h</code></td>
-     * <td>am/pm 中的小时数（1-12）</td>
-     * <td>Number</td>
-     * <td><code>12</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>m</code></td>
-     * <td>小时中的分钟数</td>
-     * <td>Number</td>
-     * <td><code>30</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>s</code></td>
-     * <td>分钟中的秒数</td>
-     * <td>Number</td>
-     * <td><code>55</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>S</code></td>
-     * <td>毫秒数</td>
-     * <td>Number</td>
-     * <td><code>978</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>z</code></td>
-     * <td>时区</td>
-     * <td>General time zone</td>
-     * <td><code>Pacific Standard Time</code>; <code>PST</code>;
-     * <code>GMT-08:00</code></td>
-     * </tr>
-     * <tr>
-     * <td><code>Z</code></td>
-     * <td>时区</td>
-     * <td>RFC 822 time zone</td>
-     * <td><code>-0800</code></td>
-     * </tr>
-     * </table>
-     * <p>
-     * <pre>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * 定义了以下模式字母（所有其他字符 'A' 到 'Z' 和 'a' 到 'z' 都被保留）： DataCacheHelper.getInstance().getUserBean(self);
+
      *                          HH:mm    15:44
      *                         h:mm a    3:44 下午
      *                        HH:mm z    15:44 CST
@@ -183,8 +58,7 @@ public class DateUtil {
      *                  yyMMddHHmmssZ    160812154440+0800
      *     yyyy-MM-dd'T'HH:mm:ss.SSSZ    2016-08-12T15:44:40.461+0800
      * EEEE 'DATE('yyyy-MM-dd')' 'TIME('HH:mm:ss')' zzzz    星期五 DATE(2016-08-12) TIME(15:44:40) 中国标准时间
-     * </pre>
-     * <p>
+     *
      * 注意：SimpleDateFormat不是线程安全的，线程安全需用{@code ThreadLocal<SimpleDateFormat>}
      */
     public static final  String DEFAULT_PATTERN = "yyyy-MM-dd HH:mm:ss";
@@ -280,7 +154,7 @@ public class DateUtil {
 
     /**
      * 将时间戳转为时间字符串
-     * <p>格式为yyyy-MM-dd HH:mm:ss</p>
+     * 格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param millis 毫秒时间戳
      * @return 时间字符串
@@ -291,7 +165,7 @@ public class DateUtil {
 
     /**
      * 将时间戳转为时间字符串
-     * <p>格式为pattern</p>
+     * 格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param millis  毫秒时间戳
      * @param pattern 时间格式
@@ -303,7 +177,7 @@ public class DateUtil {
 
     /**
      * 将时间字符串转为时间戳
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 毫秒时间戳
@@ -314,7 +188,7 @@ public class DateUtil {
 
     /**
      * 将时间字符串转为时间戳
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -331,7 +205,7 @@ public class DateUtil {
 
     /**
      * 将时间字符串转为Date类型
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return Date类型
@@ -342,7 +216,7 @@ public class DateUtil {
 
     /**
      * 将时间字符串转为Date类型
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -354,7 +228,7 @@ public class DateUtil {
 
     /**
      * 将Date类型转为时间字符串
-     * <p>格式为yyyy-MM-dd HH:mm:ss</p>
+     * 格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param date Date类型时间
      * @return 时间字符串
@@ -365,7 +239,7 @@ public class DateUtil {
 
     /**
      * 将Date类型转为时间字符串
-     * <p>格式为pattern</p>
+     * 格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param date    Date类型时间
      * @param pattern 时间格式
@@ -397,18 +271,18 @@ public class DateUtil {
 
     /**
      * 获取两个时间差（单位：unit）
-     * <p>time0和time1格式都为yyyy-MM-dd HH:mm:ss</p>
+     * time0和time1格式都为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time0 时间字符串0
      * @param time1 时间字符串1
      * @param unit  单位类型
-     *              <ul>
-     *              <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *              <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *              <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *              <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *              <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *              </ul>
+     *              DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpan(String time0, String time1, ConstUtils.TimeUnit unit) {
@@ -417,18 +291,18 @@ public class DateUtil {
 
     /**
      * 获取两个时间差（单位：unit）
-     * <p>time0和time1格式都为format</p>
+     * time0和time1格式都为formatDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time0   时间字符串0
      * @param time1   时间字符串1
      * @param unit    单位类型
-     *                <ul>
-     *                <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *                <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *                <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *                </ul>
+     *                DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);
      * @param pattern 时间格式
      * @return unit时间戳
      */
@@ -442,13 +316,13 @@ public class DateUtil {
      * @param date0 Date类型时间0
      * @param date1 Date类型时间1
      * @param unit  单位类型
-     *              <ul>
-     *              <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *              <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *              <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *              <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *              <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *              </ul>
+     *              DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *              DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpan(Date date0, Date date1, ConstUtils.TimeUnit unit) {
@@ -461,13 +335,13 @@ public class DateUtil {
      * @param millis0 毫秒时间戳0
      * @param millis1 毫秒时间戳1
      * @param unit    单位类型
-     *                <ul>
-     *                <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *                <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *                <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *                </ul>
+     *                DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpan(long millis0, long millis1, ConstUtils.TimeUnit unit) {
@@ -476,17 +350,17 @@ public class DateUtil {
 
     /**
      * 获取合适型两个时间差
-     * <p>time0和time1格式都为yyyy-MM-dd HH:mm:ss</p>
+     * time0和time1格式都为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time0     时间字符串0
      * @param time1     时间字符串1
      * @param precision 精度
-     *                  <p>precision = 0，返回null</p>
-     *                  <p>precision = 1，返回天</p>
-     *                  <p>precision = 2，返回天和小时</p>
-     *                  <p>precision = 3，返回天、小时和分钟</p>
-     *                  <p>precision = 4，返回天、小时、分钟和秒</p>
-     *                  <p>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</p>
+     *                  precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型两个时间差
      */
     public static String getFitTimeSpan(String time0, String time1, int precision) {
@@ -495,17 +369,17 @@ public class DateUtil {
 
     /**
      * 获取合适型两个时间差
-     * <p>time0和time1格式都为pattern</p>
+     * time0和time1格式都为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time0     时间字符串0
      * @param time1     时间字符串1
      * @param precision 精度
-     *                  <p>precision = 0，返回null</p>
-     *                  <p>precision = 1，返回天</p>
-     *                  <p>precision = 2，返回天和小时</p>
-     *                  <p>precision = 3，返回天、小时和分钟</p>
-     *                  <p>precision = 4，返回天、小时、分钟和秒</p>
-     *                  <p>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</p>
+     *                  precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
      * @param pattern   时间格式
      * @return 合适型两个时间差
      */
@@ -519,12 +393,12 @@ public class DateUtil {
      * @param date0     Date类型时间0
      * @param date1     Date类型时间1
      * @param precision 精度
-     *                  <p>precision = 0，返回null</p>
-     *                  <p>precision = 1，返回天</p>
-     *                  <p>precision = 2，返回天和小时</p>
-     *                  <p>precision = 3，返回天、小时和分钟</p>
-     *                  <p>precision = 4，返回天、小时、分钟和秒</p>
-     *                  <p>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</p>
+     *                  precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型两个时间差
      */
     public static String getFitTimeSpan(Date date0, Date date1, int precision) {
@@ -537,12 +411,12 @@ public class DateUtil {
      * @param millis0   毫秒时间戳1
      * @param millis1   毫秒时间戳2
      * @param precision 精度
-     *                  <p>precision = 0，返回null</p>
-     *                  <p>precision = 1，返回天</p>
-     *                  <p>precision = 2，返回天和小时</p>
-     *                  <p>precision = 3，返回天、小时和分钟</p>
-     *                  <p>precision = 4，返回天、小时、分钟和秒</p>
-     *                  <p>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</p>
+     *                  precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型两个时间差
      */
     public static String getFitTimeSpan(long millis0, long millis1, int precision) {
@@ -560,7 +434,7 @@ public class DateUtil {
 
     /**
      * 获取当前时间字符串
-     * <p>格式为yyyy-MM-dd HH:mm:ss</p>
+     * 格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 时间字符串
      */
@@ -570,7 +444,7 @@ public class DateUtil {
 
     /**
      * 获取当前时间字符串
-     * <p>格式为pattern</p>
+     * 格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param pattern 时间格式
      * @return 时间字符串
@@ -590,17 +464,17 @@ public class DateUtil {
 
     /**
      * 获取与当前时间的差（单位：unit）
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @param unit 单位类型
-     *             <ul>
-     *             <li>{@link ConstUtils.TimeUnit#MSEC}:毫秒</li>
-     *             <li>{@link ConstUtils.TimeUnit#SEC }:秒</li>
-     *             <li>{@link ConstUtils.TimeUnit#MIN }:分</li>
-     *             <li>{@link ConstUtils.TimeUnit#HOUR}:小时</li>
-     *             <li>{@link ConstUtils.TimeUnit#DAY }:天</li>
-     *             </ul>
+     *             DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}:毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }:秒DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }:分DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}:小时DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }:天DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpanByNow(String time, ConstUtils.TimeUnit unit) {
@@ -609,17 +483,17 @@ public class DateUtil {
 
     /**
      * 获取与当前时间的差（单位：unit）
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param unit    单位类型
-     *                <ul>
-     *                <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *                <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *                <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *                <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *                </ul>
+     *                DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);
      * @param pattern 时间格式
      * @return unit时间戳
      */
@@ -632,13 +506,13 @@ public class DateUtil {
      *
      * @param date Date类型时间
      * @param unit 单位类型
-     *             <ul>
-     *             <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *             <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *             <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *             <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *             <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *             </ul>
+     *             DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *             DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpanByNow(Date date, ConstUtils.TimeUnit unit) {
@@ -650,13 +524,13 @@ public class DateUtil {
      *
      * @param millis 毫秒时间戳
      * @param unit   单位类型
-     *               <ul>
-     *               <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *               <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *               <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *               <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *               <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *               </ul>
+     *               DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);
      * @return unit时间戳
      */
     public static long getTimeSpanByNow(long millis, ConstUtils.TimeUnit unit) {
@@ -665,18 +539,18 @@ public class DateUtil {
 
     /**
      * 获取合适型与当前时间的差
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time      时间字符串
      * @param precision 精度
-     *                  <ul>
-     *                  <li>precision = 0，返回null</li>
-     *                  <li>precision = 1，返回天</li>
-     *                  <li>precision = 2，返回天和小时</li>
-     *                  <li>precision = 3，返回天、小时和分钟</li>
-     *                  <li>precision = 4，返回天、小时、分钟和秒</li>
-     *                  <li>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型与当前时间的差
      */
     public static String getFitTimeSpanByNow(String time, int precision) {
@@ -685,19 +559,19 @@ public class DateUtil {
 
     /**
      * 获取合适型与当前时间的差
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time      时间字符串
      * @param precision 精度
      * @param pattern   时间格式
-     *                  <ul>
-     *                  <li>precision = 0，返回null</li>
-     *                  <li>precision = 1，返回天</li>
-     *                  <li>precision = 2，返回天和小时</li>
-     *                  <li>precision = 3，返回天、小时和分钟</li>
-     *                  <li>precision = 4，返回天、小时、分钟和秒</li>
-     *                  <li>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型与当前时间的差
      */
     public static String getFitTimeSpanByNow(String time, int precision, String pattern) {
@@ -709,14 +583,14 @@ public class DateUtil {
      *
      * @param date      Date类型时间
      * @param precision 精度
-     *                  <ul>
-     *                  <li>precision = 0，返回null</li>
-     *                  <li>precision = 1，返回天</li>
-     *                  <li>precision = 2，返回天和小时</li>
-     *                  <li>precision = 3，返回天、小时和分钟</li>
-     *                  <li>precision = 4，返回天、小时、分钟和秒</li>
-     *                  <li>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型与当前时间的差
      */
     public static String getFitTimeSpanByNow(Date date, int precision) {
@@ -728,14 +602,14 @@ public class DateUtil {
      *
      * @param millis    毫秒时间戳
      * @param precision 精度
-     *                  <ul>
-     *                  <li>precision = 0，返回null</li>
-     *                  <li>precision = 1，返回天</li>
-     *                  <li>precision = 2，返回天和小时</li>
-     *                  <li>precision = 3，返回天、小时和分钟</li>
-     *                  <li>precision = 4，返回天、小时、分钟和秒</li>
-     *                  <li>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适型与当前时间的差
      */
     public static String getFitTimeSpanByNow(long millis, int precision) {
@@ -744,19 +618,19 @@ public class DateUtil {
 
     /**
      * 获取友好型与当前时间的差
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 友好型与当前时间的差
-     * <ul>
-     * <li>如果小于1秒钟内，显示刚刚</li>
-     * <li>如果在1分钟内，显示XXX秒前</li>
-     * <li>如果在1小时内，显示XXX分钟前</li>
-     * <li>如果在1小时外的今天内，显示今天15:32</li>
-     * <li>如果是昨天的，显示昨天15:32</li>
-     * <li>其余显示，2016-10-15</li>
-     * <li>时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007</li>
-     * </ul>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果小于1秒钟内，显示刚刚DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1分钟内，显示XXX秒前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时内，显示XXX分钟前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时外的今天内，显示今天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果是昨天的，显示昨天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);其余显示，2016-10-15DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);
      */
     public static String getFriendlyTimeSpanByNow(String time) {
         return getFriendlyTimeSpanByNow(time, DEFAULT_PATTERN);
@@ -764,20 +638,20 @@ public class DateUtil {
 
     /**
      * 获取友好型与当前时间的差
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
      * @return 友好型与当前时间的差
-     * <ul>
-     * <li>如果小于1秒钟内，显示刚刚</li>
-     * <li>如果在1分钟内，显示XXX秒前</li>
-     * <li>如果在1小时内，显示XXX分钟前</li>
-     * <li>如果在1小时外的今天内，显示今天15:32</li>
-     * <li>如果是昨天的，显示昨天15:32</li>
-     * <li>其余显示，2016-10-15</li>
-     * <li>时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007</li>
-     * </ul>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果小于1秒钟内，显示刚刚DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1分钟内，显示XXX秒前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时内，显示XXX分钟前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时外的今天内，显示今天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果是昨天的，显示昨天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);其余显示，2016-10-15DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);
      */
     public static String getFriendlyTimeSpanByNow(String time, String pattern) {
         return getFriendlyTimeSpanByNow(string2Millis(time, pattern));
@@ -788,15 +662,15 @@ public class DateUtil {
      *
      * @param date Date类型时间
      * @return 友好型与当前时间的差
-     * <ul>
-     * <li>如果小于1秒钟内，显示刚刚</li>
-     * <li>如果在1分钟内，显示XXX秒前</li>
-     * <li>如果在1小时内，显示XXX分钟前</li>
-     * <li>如果在1小时外的今天内，显示今天15:32</li>
-     * <li>如果是昨天的，显示昨天15:32</li>
-     * <li>其余显示，2016-10-15</li>
-     * <li>时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007</li>
-     * </ul>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果小于1秒钟内，显示刚刚DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1分钟内，显示XXX秒前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时内，显示XXX分钟前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时外的今天内，显示今天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果是昨天的，显示昨天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);其余显示，2016-10-15DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);
      */
     public static String getFriendlyTimeSpanByNow(Date date) {
         return getFriendlyTimeSpanByNow(date.getTime());
@@ -807,15 +681,15 @@ public class DateUtil {
      *
      * @param millis 毫秒时间戳
      * @return 友好型与当前时间的差
-     * <ul>
-     * <li>如果小于1秒钟内，显示刚刚</li>
-     * <li>如果在1分钟内，显示XXX秒前</li>
-     * <li>如果在1小时内，显示XXX分钟前</li>
-     * <li>如果在1小时外的今天内，显示今天15:32</li>
-     * <li>如果是昨天的，显示昨天15:32</li>
-     * <li>其余显示，2016-10-15</li>
-     * <li>时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007</li>
-     * </ul>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果小于1秒钟内，显示刚刚DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1分钟内，显示XXX秒前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时内，显示XXX分钟前DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果在1小时外的今天内，显示今天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);如果是昨天的，显示昨天15:32DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);其余显示，2016-10-15DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);时间不合法的情况全部日期和时间信息，如星期六 十月 27 14:21:20 CST 2007DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);
      */
     @SuppressLint("DefaultLocale")
     public static String getFriendlyTimeSpanByNow(long millis) {
@@ -843,10 +717,10 @@ public class DateUtil {
 
     /**
      * 判断是否同一天
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSameDay(String time) {
         return isSameDay(string2Millis(time, DEFAULT_PATTERN));
@@ -854,11 +728,11 @@ public class DateUtil {
 
     /**
      * 判断是否同一天
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSameDay(String time, String pattern) {
         return isSameDay(string2Millis(time, pattern));
@@ -868,7 +742,7 @@ public class DateUtil {
      * 判断是否同一天
      *
      * @param date Date类型时间
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSameDay(Date date) {
         return isSameDay(date.getTime());
@@ -878,7 +752,7 @@ public class DateUtil {
      * 判断是否同一天
      *
      * @param millis 毫秒时间戳
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSameDay(long millis) {
         long wee = (System.currentTimeMillis() / ConstUtils.DAY) * ConstUtils.DAY;
@@ -887,10 +761,10 @@ public class DateUtil {
 
     /**
      * 判断是否闰年
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
-     * @return {@code true}: 闰年<br>{@code false}: 平年
+     * @return {@code true}: 闰年DataCacheHelper.getInstance().getUserBean(self);{@code false}: 平年
      */
     public static boolean isLeapYear(String time) {
         return isLeapYear(string2Date(time, DEFAULT_PATTERN));
@@ -898,11 +772,11 @@ public class DateUtil {
 
     /**
      * 判断是否闰年
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
-     * @return {@code true}: 闰年<br>{@code false}: 平年
+     * @return {@code true}: 闰年DataCacheHelper.getInstance().getUserBean(self);{@code false}: 平年
      */
     public static boolean isLeapYear(String time, String pattern) {
         return isLeapYear(string2Date(time, pattern));
@@ -912,7 +786,7 @@ public class DateUtil {
      * 判断是否闰年
      *
      * @param date Date类型时间
-     * @return {@code true}: 闰年<br>{@code false}: 平年
+     * @return {@code true}: 闰年DataCacheHelper.getInstance().getUserBean(self);{@code false}: 平年
      */
     public static boolean isLeapYear(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -925,7 +799,7 @@ public class DateUtil {
      * 判断是否闰年
      *
      * @param millis 毫秒时间戳
-     * @return {@code true}: 闰年<br>{@code false}: 平年
+     * @return {@code true}: 闰年DataCacheHelper.getInstance().getUserBean(self);{@code false}: 平年
      */
     public static boolean isLeapYear(long millis) {
         return isLeapYear(millis2Date(millis));
@@ -935,7 +809,7 @@ public class DateUtil {
      * 判断是否闰年
      *
      * @param year 年份
-     * @return {@code true}: 闰年<br>{@code false}: 平年
+     * @return {@code true}: 闰年DataCacheHelper.getInstance().getUserBean(self);{@code false}: 平年
      */
     public static boolean isLeapYear(int year) {
         return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
@@ -943,7 +817,7 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 星期
@@ -954,7 +828,7 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -986,8 +860,8 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>注意：周日的Index才是1，周六为7</p>
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * 注意：周日的Index才是1，周六为7DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 1...5
@@ -998,8 +872,8 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>注意：周日的Index才是1，周六为7</p>
-     * <p>time格式为pattern</p>
+     * 注意：周日的Index才是1，周六为7DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -1011,7 +885,7 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>注意：周日的Index才是1，周六为7</p>
+     * 注意：周日的Index才是1，周六为7DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param date Date类型时间
      * @return 1...7
@@ -1024,7 +898,7 @@ public class DateUtil {
 
     /**
      * 获取星期
-     * <p>注意：周日的Index才是1，周六为7</p>
+     * 注意：周日的Index才是1，周六为7DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param millis 毫秒时间戳
      * @return 1...7
@@ -1035,8 +909,8 @@ public class DateUtil {
 
     /**
      * 获取月份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 1...5
@@ -1047,8 +921,8 @@ public class DateUtil {
 
     /**
      * 获取月份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
-     * <p>time格式为pattern</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -1060,7 +934,7 @@ public class DateUtil {
 
     /**
      * 获取月份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param date Date类型时间
      * @return 1...5
@@ -1073,7 +947,7 @@ public class DateUtil {
 
     /**
      * 获取月份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param millis 毫秒时间戳
      * @return 1...5
@@ -1084,8 +958,8 @@ public class DateUtil {
 
     /**
      * 获取年份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 1...54
@@ -1096,8 +970,8 @@ public class DateUtil {
 
     /**
      * 获取年份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
-     * <p>time格式为pattern</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -1109,7 +983,7 @@ public class DateUtil {
 
     /**
      * 获取年份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param date Date类型时间
      * @return 1...54
@@ -1122,7 +996,7 @@ public class DateUtil {
 
     /**
      * 获取年份中的第几周
-     * <p>注意：国外周日才是新的一周的开始</p>
+     * 注意：国外周日才是新的一周的开始DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param millis 毫秒时间戳
      * @return 1...54
@@ -1135,7 +1009,7 @@ public class DateUtil {
 
     /**
      * 获取生肖
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 生肖
@@ -1146,7 +1020,7 @@ public class DateUtil {
 
     /**
      * 获取生肖
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式
@@ -1193,7 +1067,7 @@ public class DateUtil {
 
     /**
      * 获取星座
-     * <p>time格式为yyyy-MM-dd HH:mm:ss</p>
+     * time格式为yyyy-MM-dd HH:mm:ssDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time 时间字符串
      * @return 生肖
@@ -1204,7 +1078,7 @@ public class DateUtil {
 
     /**
      * 获取星座
-     * <p>time格式为pattern</p>
+     * time格式为patternDataCacheHelper.getInstance().getUserBean(self);
      *
      * @param time    时间字符串
      * @param pattern 时间格式

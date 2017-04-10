@@ -4,8 +4,28 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mobile.library</groupId>
   <artifactId>libraryMobile</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.2</version>
   <packaging>aar</packaging>
+  <name>The library is a custom view about "Personal center consumption points" in our old version app</name>
+  <url>https://github.com/HenryPO/LibraryProject</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>lihy</id>
+      <name>lihy</name>
+      <email>763454038.ly@gmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/HenryPO/LibraryProject</connection>
+    <developerConnection>https://github.com/HenryPO/LibraryProject</developerConnection>
+    <url>https://github.com/HenryPO/LibraryProject</url>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>com.android.support</groupId>

@@ -140,7 +140,7 @@ public class StringUtil {
 	 *
 	 * @param s
 	 *            待校验字符串
-	 * @return {@code true}: 空<br>
+	 * @return {@code true}: 空DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不为空
 	 */
 	public static boolean isEmpty(CharSequence s) {
@@ -152,7 +152,7 @@ public class StringUtil {
 	 *
 	 * @param s
 	 *            待校验字符串
-	 * @return {@code true}: null或全空格<br>
+	 * @return {@code true}: null或全空格DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不为null且不全空格
 	 */
 	public static boolean isSpace(String s) {
@@ -166,7 +166,7 @@ public class StringUtil {
 	 *            待校验字符串a
 	 * @param b
 	 *            待校验字符串b
-	 * @return {@code true}: 相等<br>
+	 * @return {@code true}: 相等DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不相等
 	 */
 	public static boolean equals(CharSequence a, CharSequence b) {
@@ -194,7 +194,7 @@ public class StringUtil {
 	 *            待校验字符串a
 	 * @param b
 	 *            待校验字符串b
-	 * @return {@code true}: 相等<br>
+	 * @return {@code true}: 相等DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不相等
 	 */
 	public static boolean equalsIgnoreCase(String a, String b) {

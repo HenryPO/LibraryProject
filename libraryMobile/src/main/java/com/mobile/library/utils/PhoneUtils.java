@@ -35,7 +35,7 @@ public class PhoneUtils {
     /**
      * 判断设备是否是手机
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isPhone() {
         TelephonyManager tm = (TelephonyManager) Utils.getContext().getSystemService(Context.TELEPHONY_SERVICE);
@@ -44,7 +44,7 @@ public class PhoneUtils {
 
     /**
      * 获取IMEI码
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return IMEI码
      */
@@ -56,7 +56,7 @@ public class PhoneUtils {
 
     /**
      * 获取IMSI码
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return IMSI码
      */
@@ -70,12 +70,12 @@ public class PhoneUtils {
      * 获取移动终端类型
      *
      * @return 手机制式
-     * <ul>
-     * <li>{@link TelephonyManager#PHONE_TYPE_NONE } : 0 手机制式未知</li>
-     * <li>{@link TelephonyManager#PHONE_TYPE_GSM  } : 1 手机制式为GSM，移动和联通</li>
-     * <li>{@link TelephonyManager#PHONE_TYPE_CDMA } : 2 手机制式为CDMA，电信</li>
-     * <li>{@link TelephonyManager#PHONE_TYPE_SIP  } : 3</li>
-     * </ul>
+     * DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);{@link TelephonyManager#PHONE_TYPE_NONE } : 0 手机制式未知DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);{@link TelephonyManager#PHONE_TYPE_GSM  } : 1 手机制式为GSM，移动和联通DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);{@link TelephonyManager#PHONE_TYPE_CDMA } : 2 手机制式为CDMA，电信DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);{@link TelephonyManager#PHONE_TYPE_SIP  } : 3DataCacheHelper.getInstance().getUserBean(self);
+     * DataCacheHelper.getInstance().getUserBean(self);
      */
     public static int getPhoneType() {
         TelephonyManager tm = (TelephonyManager) Utils.getContext().getSystemService(Context.TELEPHONY_SERVICE);
@@ -85,7 +85,7 @@ public class PhoneUtils {
     /**
      * 判断sim卡是否准备好
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSimCardReady() {
         TelephonyManager tm = (TelephonyManager) Utils.getContext().getSystemService(Context.TELEPHONY_SERVICE);
@@ -94,7 +94,7 @@ public class PhoneUtils {
 
     /**
      * 获取Sim卡运营商名称
-     * <p>中国移动、如中国联通、中国电信</p>
+     * 中国移动、如中国联通、中国电信DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return sim卡运营商名称
      */
@@ -105,7 +105,7 @@ public class PhoneUtils {
 
     /**
      * 获取Sim卡运营商名称
-     * <p>中国移动、如中国联通、中国电信</p>
+     * 中国移动、如中国联通、中国电信DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 移动网络运营商名称
      */
@@ -129,23 +129,23 @@ public class PhoneUtils {
 
     /**
      * 获取手机状态信息
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
-     * @return DeviceId(IMEI) = 99000311726612<br>
-     * DeviceSoftwareVersion = 00<br>
-     * Line1Number =<br>
-     * NetworkCountryIso = cn<br>
-     * NetworkOperator = 46003<br>
-     * NetworkOperatorName = 中国电信<br>
-     * NetworkType = 6<br>
-     * honeType = 2<br>
-     * SimCountryIso = cn<br>
-     * SimOperator = 46003<br>
-     * SimOperatorName = 中国电信<br>
-     * SimSerialNumber = 89860315045710604022<br>
-     * SimState = 5<br>
-     * SubscriberId(IMSI) = 460030419724900<br>
-     * VoiceMailNumber = *86<br>
+     * @return DeviceId(IMEI) = 99000311726612DataCacheHelper.getInstance().getUserBean(self);
+     * DeviceSoftwareVersion = 00DataCacheHelper.getInstance().getUserBean(self);
+     * Line1Number =DataCacheHelper.getInstance().getUserBean(self);
+     * NetworkCountryIso = cnDataCacheHelper.getInstance().getUserBean(self);
+     * NetworkOperator = 46003DataCacheHelper.getInstance().getUserBean(self);
+     * NetworkOperatorName = 中国电信DataCacheHelper.getInstance().getUserBean(self);
+     * NetworkType = 6DataCacheHelper.getInstance().getUserBean(self);
+     * honeType = 2DataCacheHelper.getInstance().getUserBean(self);
+     * SimCountryIso = cnDataCacheHelper.getInstance().getUserBean(self);
+     * SimOperator = 46003DataCacheHelper.getInstance().getUserBean(self);
+     * SimOperatorName = 中国电信DataCacheHelper.getInstance().getUserBean(self);
+     * SimSerialNumber = 89860315045710604022DataCacheHelper.getInstance().getUserBean(self);
+     * SimState = 5DataCacheHelper.getInstance().getUserBean(self);
+     * SubscriberId(IMSI) = 460030419724900DataCacheHelper.getInstance().getUserBean(self);
+     * VoiceMailNumber = *86DataCacheHelper.getInstance().getUserBean(self);
      */
     public static String getPhoneStatus() {
         TelephonyManager tm = (TelephonyManager) Utils.getContext()
@@ -182,7 +182,7 @@ public class PhoneUtils {
 
     /**
      * 拨打电话
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.CALL_PHONE"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.CALL_PHONE"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param phoneNumber 电话号码
      */
@@ -207,7 +207,7 @@ public class PhoneUtils {
 
     /**
      * 发送短信
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.SEND_SMS"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.SEND_SMS"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param phoneNumber 接收号码
      * @param content     短信内容
@@ -228,8 +228,8 @@ public class PhoneUtils {
 
     /**
      * 获取手机联系人
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>}</p>
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_CONTACTS"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>}DataCacheHelper.getInstance().getUserBean(self);
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_CONTACTS"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 联系人链表
      */
@@ -292,7 +292,7 @@ public class PhoneUtils {
 
     /**
      * 打开手机联系人界面点击联系人后便获取该号码
-     * <p>参照以下注释代码</p>
+     * 参照以下注释代码DataCacheHelper.getInstance().getUserBean(self);
      */
     public static void getContactNum() {
         Log.d("tips", "U should copy the following code.");
@@ -324,8 +324,8 @@ public class PhoneUtils {
 
     /**
      * 获取手机短信并保存到xml中
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>}</p>
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_SMS"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>}DataCacheHelper.getInstance().getUserBean(self);
+     * 需添加权限 {@code <uses-permission android:name="android.permission.READ_SMS"/>}DataCacheHelper.getInstance().getUserBean(self);
      */
     public static void getAllSMS() {
         // 1.获取短信

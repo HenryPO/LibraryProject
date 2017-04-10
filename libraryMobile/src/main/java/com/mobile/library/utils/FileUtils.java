@@ -52,7 +52,7 @@ public class FileUtils {
 	 *
 	 * @param filePath
 	 *            文件路径
-	 * @return {@code true}: 存在<br>
+	 * @return {@code true}: 存在DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在
 	 */
 	public static boolean isFileExists(String filePath) {
@@ -64,7 +64,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 存在<br>
+	 * @return {@code true}: 存在DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在
 	 */
 	public static boolean isFileExists(File file) {
@@ -78,7 +78,7 @@ public class FileUtils {
 	 *            文件路径
 	 * @param newName
 	 *            新名称
-	 * @return {@code true}: 重命名成功<br>
+	 * @return {@code true}: 重命名成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 重命名失败
 	 */
 	public static boolean rename(String filePath, String newName) {
@@ -92,7 +92,7 @@ public class FileUtils {
 	 *            文件
 	 * @param newName
 	 *            新名称
-	 * @return {@code true}: 重命名成功<br>
+	 * @return {@code true}: 重命名成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 重命名失败
 	 */
 	public static boolean rename(File file, String newName) {
@@ -118,7 +118,7 @@ public class FileUtils {
 	 *
 	 * @param dirPath
 	 *            目录路径
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isDir(String dirPath) {
@@ -130,7 +130,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isDir(File file) {
@@ -142,7 +142,7 @@ public class FileUtils {
 	 *
 	 * @param filePath
 	 *            文件路径
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isFile(String filePath) {
@@ -154,7 +154,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isFile(File file) {
@@ -166,7 +166,7 @@ public class FileUtils {
 	 *
 	 * @param dirPath
 	 *            目录路径
-	 * @return {@code true}: 存在或创建成功<br>
+	 * @return {@code true}: 存在或创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在或创建失败
 	 */
 	public static boolean createOrExistsDir(String dirPath) {
@@ -178,7 +178,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 存在或创建成功<br>
+	 * @return {@code true}: 存在或创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在或创建失败
 	 */
 	public static boolean createOrExistsDir(File file) {
@@ -191,7 +191,7 @@ public class FileUtils {
 	 *
 	 * @param filePath
 	 *            文件路径
-	 * @return {@code true}: 存在或创建成功<br>
+	 * @return {@code true}: 存在或创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在或创建失败
 	 */
 	public static boolean createOrExistsFile(String filePath) {
@@ -203,7 +203,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 存在或创建成功<br>
+	 * @return {@code true}: 存在或创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不存在或创建失败
 	 */
 	public static boolean createOrExistsFile(File file) {
@@ -227,7 +227,7 @@ public class FileUtils {
 	 *
 	 * @param filePath
 	 *            文件路径
-	 * @return {@code true}: 创建成功<br>
+	 * @return {@code true}: 创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 创建失败
 	 */
 	public static boolean createFileByDeleteOldFile(String filePath) {
@@ -239,7 +239,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 创建成功<br>
+	 * @return {@code true}: 创建成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 创建失败
 	 */
 	public static boolean createFileByDeleteOldFile(File file) {
@@ -268,7 +268,7 @@ public class FileUtils {
 	 *            目标目录路径
 	 * @param isMove
 	 *            是否移动
-	 * @return {@code true}: 复制或移动成功<br>
+	 * @return {@code true}: 复制或移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制或移动失败
 	 */
 	private static boolean copyOrMoveDir(String srcDirPath, String destDirPath, boolean isMove) {
@@ -284,7 +284,7 @@ public class FileUtils {
 	 *            目标目录
 	 * @param isMove
 	 *            是否移动
-	 * @return {@code true}: 复制或移动成功<br>
+	 * @return {@code true}: 复制或移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制或移动失败
 	 */
 	private static boolean copyOrMoveDir(File srcDir, File destDir, boolean isMove) {
@@ -329,7 +329,7 @@ public class FileUtils {
 	 *            目标文件路径
 	 * @param isMove
 	 *            是否移动
-	 * @return {@code true}: 复制或移动成功<br>
+	 * @return {@code true}: 复制或移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制或移动失败
 	 */
 	private static boolean copyOrMoveFile(String srcFilePath, String destFilePath, boolean isMove) {
@@ -345,7 +345,7 @@ public class FileUtils {
 	 *            目标文件
 	 * @param isMove
 	 *            是否移动
-	 * @return {@code true}: 复制或移动成功<br>
+	 * @return {@code true}: 复制或移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制或移动失败
 	 */
 	private static boolean copyOrMoveFile(File srcFile, File destFile, boolean isMove) {
@@ -375,7 +375,7 @@ public class FileUtils {
 	 *            源目录路径
 	 * @param destDirPath
 	 *            目标目录路径
-	 * @return {@code true}: 复制成功<br>
+	 * @return {@code true}: 复制成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制失败
 	 */
 	public static boolean copyDir(String srcDirPath, String destDirPath) {
@@ -389,7 +389,7 @@ public class FileUtils {
 	 *            源目录
 	 * @param destDir
 	 *            目标目录
-	 * @return {@code true}: 复制成功<br>
+	 * @return {@code true}: 复制成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制失败
 	 */
 	public static boolean copyDir(File srcDir, File destDir) {
@@ -403,7 +403,7 @@ public class FileUtils {
 	 *            源文件路径
 	 * @param destFilePath
 	 *            目标文件路径
-	 * @return {@code true}: 复制成功<br>
+	 * @return {@code true}: 复制成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制失败
 	 */
 	public static boolean copyFile(String srcFilePath, String destFilePath) {
@@ -417,7 +417,7 @@ public class FileUtils {
 	 *            源文件
 	 * @param destFile
 	 *            目标文件
-	 * @return {@code true}: 复制成功<br>
+	 * @return {@code true}: 复制成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 复制失败
 	 */
 	public static boolean copyFile(File srcFile, File destFile) {
@@ -431,7 +431,7 @@ public class FileUtils {
 	 *            源目录路径
 	 * @param destDirPath
 	 *            目标目录路径
-	 * @return {@code true}: 移动成功<br>
+	 * @return {@code true}: 移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 移动失败
 	 */
 	public static boolean moveDir(String srcDirPath, String destDirPath) {
@@ -445,7 +445,7 @@ public class FileUtils {
 	 *            源目录
 	 * @param destDir
 	 *            目标目录
-	 * @return {@code true}: 移动成功<br>
+	 * @return {@code true}: 移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 移动失败
 	 */
 	public static boolean moveDir(File srcDir, File destDir) {
@@ -459,7 +459,7 @@ public class FileUtils {
 	 *            源文件路径
 	 * @param destFilePath
 	 *            目标文件路径
-	 * @return {@code true}: 移动成功<br>
+	 * @return {@code true}: 移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 移动失败
 	 */
 	public static boolean moveFile(String srcFilePath, String destFilePath) {
@@ -473,7 +473,7 @@ public class FileUtils {
 	 *            源文件
 	 * @param destFile
 	 *            目标文件
-	 * @return {@code true}: 移动成功<br>
+	 * @return {@code true}: 移动成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 移动失败
 	 */
 	public static boolean moveFile(File srcFile, File destFile) {
@@ -485,7 +485,7 @@ public class FileUtils {
 	 *
 	 * @param dirPath
 	 *            目录路径
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteDir(String dirPath) {
@@ -497,7 +497,7 @@ public class FileUtils {
 	 *
 	 * @param dir
 	 *            目录
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteDir(File dir) {
@@ -530,7 +530,7 @@ public class FileUtils {
 	 *
 	 * @param srcFilePath
 	 *            文件路径
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteFile(String srcFilePath) {
@@ -542,7 +542,7 @@ public class FileUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteFile(File file) {
@@ -554,7 +554,7 @@ public class FileUtils {
 	 *
 	 * @param dirPath
 	 *            目录路径
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteFilesInDir(String dirPath) {
@@ -566,7 +566,7 @@ public class FileUtils {
 	 *
 	 * @param dir
 	 *            目录
-	 * @return {@code true}: 删除成功<br>
+	 * @return {@code true}: 删除成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 删除失败
 	 */
 	public static boolean deleteFilesInDir(File dir) {
@@ -665,9 +665,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下所有后缀名为suffix的文件
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dirPath
 	 *            目录路径
@@ -683,9 +683,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下所有后缀名为suffix的文件
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dir
 	 *            目录
@@ -714,9 +714,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下所有后缀名为suffix的文件包括子目录
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dirPath
 	 *            目录路径
@@ -730,9 +730,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下所有后缀名为suffix的文件包括子目录
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dir
 	 *            目录
@@ -843,9 +843,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下指定文件名的文件包括子目录
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dirPath
 	 *            目录路径
@@ -859,9 +859,9 @@ public class FileUtils {
 
 	/**
 	 * 获取目录下指定文件名的文件包括子目录
-	 * <p>
+	 *
 	 * 大小写忽略
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dir
 	 *            目录
@@ -896,7 +896,7 @@ public class FileUtils {
 	 *            输入流
 	 * @param append
 	 *            是否追加在文件末
-	 * @return {@code true}: 写入成功<br>
+	 * @return {@code true}: 写入成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 写入失败
 	 */
 	public static boolean writeFileFromIS(String filePath, InputStream is, boolean append) {
@@ -912,7 +912,7 @@ public class FileUtils {
 	 *            输入流
 	 * @param append
 	 *            是否追加在文件末
-	 * @return {@code true}: 写入成功<br>
+	 * @return {@code true}: 写入成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 写入失败
 	 */
 	public static boolean writeFileFromIS(File file, InputStream is, boolean append) {
@@ -946,7 +946,7 @@ public class FileUtils {
 	 *            写入内容
 	 * @param append
 	 *            是否追加在文件末
-	 * @return {@code true}: 写入成功<br>
+	 * @return {@code true}: 写入成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 写入失败
 	 */
 	public static boolean writeFileFromString(String filePath, String content, boolean append) {
@@ -962,7 +962,7 @@ public class FileUtils {
 	 *            写入内容
 	 * @param append
 	 *            是否追加在文件末
-	 * @return {@code true}: 写入成功<br>
+	 * @return {@code true}: 写入成功DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 写入失败
 	 */
 	public static boolean writeFileFromString(File file, String content, boolean append) {

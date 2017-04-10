@@ -25,7 +25,7 @@ public class RegexUtils {
      * 验证手机号（简单）
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isMobileSimple(CharSequence input) {
         return isMatch(ConstUtils.REGEX_MOBILE_SIMPLE, input);
@@ -35,7 +35,7 @@ public class RegexUtils {
      * 验证手机号（精确）
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isMobileExact(CharSequence input) {
         return isMatch(ConstUtils.REGEX_MOBILE_EXACT, input);
@@ -45,7 +45,7 @@ public class RegexUtils {
      * 验证电话号码
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isTel(CharSequence input) {
         return isMatch(ConstUtils.REGEX_TEL, input);
@@ -55,7 +55,7 @@ public class RegexUtils {
      * 验证身份证号码15位
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isIDCard15(CharSequence input) {
         return isMatch(ConstUtils.REGEX_ID_CARD15, input);
@@ -65,7 +65,7 @@ public class RegexUtils {
      * 验证身份证号码18位
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isIDCard18(CharSequence input) {
         return isMatch(ConstUtils.REGEX_ID_CARD18, input);
@@ -75,7 +75,7 @@ public class RegexUtils {
      * 验证邮箱
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isEmail(CharSequence input) {
         return isMatch(ConstUtils.REGEX_EMAIL, input);
@@ -85,7 +85,7 @@ public class RegexUtils {
      * 验证URL
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isURL(CharSequence input) {
         return isMatch(ConstUtils.REGEX_URL, input);
@@ -95,7 +95,7 @@ public class RegexUtils {
      * 验证汉字
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isZh(CharSequence input) {
         return isMatch(ConstUtils.REGEX_ZH, input);
@@ -103,10 +103,10 @@ public class RegexUtils {
 
     /**
      * 验证用户名
-     * <p>取值范围为a-z,A-Z,0-9,"_",汉字，不能以"_"结尾,用户名必须是6-20位</p>
+     * 取值范围为a-z,A-Z,0-9,"_",汉字，不能以"_"结尾,用户名必须是6-20位DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isUsername(CharSequence input) {
         return isMatch(ConstUtils.REGEX_USERNAME, input);
@@ -116,7 +116,7 @@ public class RegexUtils {
      * 验证yyyy-MM-dd格式的日期校验，已考虑平闰年
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isDate(CharSequence input) {
         return isMatch(ConstUtils.REGEX_DATE, input);
@@ -126,7 +126,7 @@ public class RegexUtils {
      * 验证IP地址
      *
      * @param input 待验证文本
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isIP(CharSequence input) {
         return isMatch(ConstUtils.REGEX_IP, input);
@@ -137,7 +137,7 @@ public class RegexUtils {
      *
      * @param regex 正则表达式
      * @param input 要匹配的字符串
-     * @return {@code true}: 匹配<br>{@code false}: 不匹配
+     * @return {@code true}: 匹配DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不匹配
      */
     public static boolean isMatch(String regex, CharSequence input) {
         return input != null && input.length() > 0 && Pattern.matches(regex, input);

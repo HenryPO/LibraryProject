@@ -641,15 +641,15 @@ public class EncoderHandler {
 	/************************ DES加密相关 ***********************/
 	/**
 	 * DES转变
-	 * <p>
+	 *
 	 * 法算法名称/加密模式/填充方式
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 填充方式有：NoPadding、ZerosPadding、PKCS5Padding
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static String DES_Transformation = "DES/ECB/NoPadding";
 	private static final String DES_Algorithm = "DES";
@@ -735,15 +735,15 @@ public class EncoderHandler {
 	/************************ 3DES加密相关 ***********************/
 	/**
 	 * 3DES转变
-	 * <p>
+	 *
 	 * 法算法名称/加密模式/填充方式
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 填充方式有：NoPadding、ZerosPadding、PKCS5Padding
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static String TripleDES_Transformation = "DESede/ECB/NoPadding";
 	private static final String TripleDES_Algorithm = "DESede";
@@ -829,15 +829,15 @@ public class EncoderHandler {
 	/************************ AES加密相关 ***********************/
 	/**
 	 * AES转变
-	 * <p>
+	 *
 	 * 法算法名称/加密模式/填充方式
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 加密模式有：电子密码本模式ECB、加密块链模式CBC、加密反馈模式CFB、输出反馈模式OFB
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 填充方式有：NoPadding、ZerosPadding、PKCS5Padding
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static String AES_Transformation = "AES/ECB/NoPadding";
 	private static final String AES_Algorithm = "AES";

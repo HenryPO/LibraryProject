@@ -49,11 +49,11 @@ public class ScreenUtils {
 
     /**
      * 设置屏幕为横屏
-     * <p>还有一种就是在Activity中加属性android:screenOrientation="landscape"</p>
-     * <p>不设置Activity的android:configChanges时，切屏会重新调用各个生命周期，切横屏时会执行一次，切竖屏时会执行两次</p>
-     * <p>设置Activity的android:configChanges="orientation"时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次</p>
-     * <p>设置Activity的android:configChanges="orientation|keyboardHidden|screenSize"（4.0以上必须带最后一个参数）时
-     * 切屏不会重新调用各个生命周期，只会执行onConfigurationChanged方法</p>
+     * 还有一种就是在Activity中加属性android:screenOrientation="landscape"DataCacheHelper.getInstance().getUserBean(self);
+     * 不设置Activity的android:configChanges时，切屏会重新调用各个生命周期，切横屏时会执行一次，切竖屏时会执行两次DataCacheHelper.getInstance().getUserBean(self);
+     * 设置Activity的android:configChanges="orientation"时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次DataCacheHelper.getInstance().getUserBean(self);
+     * 设置Activity的android:configChanges="orientation|keyboardHidden|screenSize"（4.0以上必须带最后一个参数）时
+     * 切屏不会重新调用各个生命周期，只会执行onConfigurationChanged方法DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param activity activity
      */
@@ -73,7 +73,7 @@ public class ScreenUtils {
     /**
      * 判断是否横屏
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isLandscape() {
         return Utils.getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
@@ -82,7 +82,7 @@ public class ScreenUtils {
     /**
      * 判断是否竖屏
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isPortrait() {
         return Utils.getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
@@ -148,7 +148,7 @@ public class ScreenUtils {
     /**
      * 判断是否锁屏
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isScreenLock() {
         KeyguardManager km = (KeyguardManager) Utils.getContext()

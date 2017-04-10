@@ -18,11 +18,11 @@ public class CleanUtils {
 
 	/**
 	 * 清除内部缓存
-	 * <p>
-	 * /data/data/com.xxx.xxx/cache
-	 * </p>
 	 *
-	 * @return {@code true}: 清除成功<br>
+	 * /data/data/com.xxx.xxx/cache
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalCache() {
@@ -31,11 +31,11 @@ public class CleanUtils {
 
 	/**
 	 * 清除内部文件
-	 * <p>
-	 * /data/data/com.xxx.xxx/files
-	 * </p>
 	 *
-	 * @return {@code true}: 清除成功<br>
+	 * /data/data/com.xxx.xxx/files
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalFiles() {
@@ -44,11 +44,11 @@ public class CleanUtils {
 
 	/**
 	 * 清除内部数据库
-	 * <p>
-	 * /data/data/com.xxx.xxx/databases
-	 * </p>
 	 *
-	 * @return {@code true}: 清除成功<br>
+	 * /data/data/com.xxx.xxx/databases
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalDbs() {
@@ -57,13 +57,13 @@ public class CleanUtils {
 
 	/**
 	 * 根据名称清除数据库
-	 * <p>
+	 *
 	 * /data/data/com.xxx.xxx/databases/dbName
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param dbName
 	 *            数据库名称
-	 * @return {@code true}: 清除成功<br>
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalDbByName(String dbName) {
@@ -72,11 +72,11 @@ public class CleanUtils {
 
 	/**
 	 * 清除内部SP
-	 * <p>
-	 * /data/data/com.xxx.xxx/shared_prefs
-	 * </p>
 	 *
-	 * @return {@code true}: 清除成功<br>
+	 * /data/data/com.xxx.xxx/shared_prefs
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalSP() {
@@ -86,11 +86,11 @@ public class CleanUtils {
 
 	/**
 	 * 清除外部缓存
-	 * <p>
-	 * /storage/emulated/0/android/data/com.xxx.xxx/cache
-	 * </p>
 	 *
-	 * @return {@code true}: 清除成功<br>
+	 * /storage/emulated/0/android/data/com.xxx.xxx/cache
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanExternalCache() {
@@ -102,7 +102,7 @@ public class CleanUtils {
 	 *
 	 * @param dirPath
 	 *            目录路径
-	 * @return {@code true}: 清除成功<br>
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanCustomCache(String dirPath) {
@@ -114,7 +114,7 @@ public class CleanUtils {
 	 *
 	 * @param dir
 	 *            目录
-	 * @return {@code true}: 清除成功<br>
+	 * @return {@code true}: 清除成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanCustomCache(File dir) {

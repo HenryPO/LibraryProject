@@ -2,7 +2,29 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-
+//ext {
+//    bintrayRepo = 'library'
+//    bintrayName = 'lhy-library'
+//
+//    publishedGroupId = 'com.mobile.library'
+//    libraryName = 'library'
+//    artifact = 'lhy-library'
+//
+//    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+//
+//    siteUrl = 'https://github.com/HenryPO/LibraryProject'
+//    gitUrl = 'https://github.com/HenryPO/LibraryProject.git'
+//
+//    libraryVersion = '1.0.1'
+//
+//    developerId = 'henry'
+//    developerName = 'lihy'
+//    developerEmail = '763454038.li@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
@@ -11,8 +33,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 101
-        versionName "1.0.4"
+        versionCode 102
+        versionName "1.0.2"
     }
 
     buildTypes {
@@ -20,6 +42,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 }
 
@@ -33,86 +59,73 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.7.5'
 }
 
-//def siteUrl = 'https://github.com/HenryPO/LibraryMobile'      // 项目的主页
-//def gitUrl = 'https://github.com/HenryPO/LibraryMobile.git'   // Git仓库的url
-
-//install {
-//    repositories.mavenInstaller {
-//        // This generates POM.xml with proper parameters
-//        pom {
-//            project {
-//                packaging 'aar'
-//                // Add your description here
-//                name '常用工具类集合'    //项目描述
-//                url siteUrl
-//                // Set your license
-//                licenses {
-//                    license {
-//                        name 'The Apache Software License, Version 2.0'
-//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id 'lihy'        //填写的一些基本信息
-//                        name 'lihy'
-//                        email '763454038@qq.com'
-//                    }
-//                }
-//                scm {
-//                    connection gitUrl
-//                    developerConnection gitUrl
-//                    url siteUrl
-//                }
-//            }
-//        }
-//    }
-//}
-// 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version, 这个version影响后面的引用
-group = 'com.mobile.library'// library库包名
-version = '1.0.4'// 版本号
-
-task generateSourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier 'sources'
-}
-
-task generateJavadocs(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    //使用android.getBootClasspath关联Android SDK类文件
-}
-
-task generateJavadocsJar(type: Jar) {
-    from generateJavadocs.destinationDir
-    classifier 'javadoc'
-}
-
-
-artifacts {
-    archives generateJavadocsJar //原文为generateJavaDocsJar，此处已做矫正，要严格显示大小写
-    archives generateSourcesJar
-}
-//generateJavadocsJar.dependsOn generateJavadocs
-
-
+//important
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("763454038")
-    key = properties.getProperty("489e1c5c56c07e9df93bcc4c55959c42ac8a4608")
-    pkg {
-        repo = "maven"
-        name = "com.mobile.library"    //发布到JCenter上的项目名字
-        version {
-            name = '1.0.4-tuts' //版本名称
-            desc = 'My test upload' //版本描述
-            released = new Date() //上传过程中如果此处报错，可以注释掉此句
-            vcsTag = '1.0.4' //版本
+
+version = "1.0.2"//发布的library的版本号,这个比较关键！！！
+
+def siteUrl = 'https://github.com/HenryPO/LibraryProject'      // 项目的主页(可随意，建议填library的github地址)
+def gitUrl = 'https://github.com/HenryPO/LibraryProject'      // Git仓库的url(可随意，建议填library的github地址)
+group = "com.mobile.library"    // 这里是groupId ,必须填写(建议填唯一的包名)
+
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'The library is a custom view about "Personal center consumption points" in our old version app'     //项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'lihy'        //开发者的基本信息(建议填自己名称)
+                        name 'lihy'    //开发者基本信息(建议填自己名称)
+                        email '763454038.ly@gmail.com'   //开发者基本信息(建议填自己名称)
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
         }
-        licenses = ['Apache-2.0'] //开源协议
-        vcsUrl = 'https://github.com/HenryPO/LibraryMobile.git' //指定项目git地址
-        websiteUrl = 'https://github.com/HenryPO/LibraryMobile' //项目官网地址
     }
-    configurations = ['archives'] //必须为archives
+}
+
+bintray {
+    user = properties.getProperty("bintray.user") //读取 local.properties 文件里面的 bintray.user
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "library"
+        group = group
+        name = "lhy-library"//发布到JCenter上的项目名字，必须填写
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+        version {
+            name = '1.0.2'
+            vcsTag = '1.0.2'
+            desc = "Library for android"
+            attributes = ['lhy-library': 'com.mobile.library']
+//            gpg {
+//                sign = true //Determines whether to GPG sign the files. The default is false
+//                passphrase = properties.getProperty("bintray.gpg.password")
+//                //Optional. The passphrase for GPG signing'
+//            }
+        }
+    }
 }

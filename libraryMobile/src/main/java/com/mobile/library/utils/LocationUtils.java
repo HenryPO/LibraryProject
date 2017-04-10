@@ -34,7 +34,7 @@ public class LocationUtils {
     /**
      * 判断Gps是否可用
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isGpsEnabled() {
         LocationManager lm = (LocationManager) Utils.getContext().getSystemService(Context.LOCATION_SERVICE);
@@ -44,7 +44,7 @@ public class LocationUtils {
     /**
      * 判断定位是否可用
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isLocationEnabled() {
         LocationManager lm = (LocationManager) Utils.getContext().getSystemService(Context.LOCATION_SERVICE);
@@ -62,18 +62,18 @@ public class LocationUtils {
 
     /**
      * 注册
-     * <p>使用完记得调用{@link #unregister()}</p>
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.INTERNET"/>}</p>
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>}</p>
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>}</p>
-     * <p>如果{@code minDistance}为0，则通过{@code minTime}来定时更新；</p>
-     * <p>{@code minDistance}不为0，则以{@code minDistance}为准；</p>
-     * <p>两者都为0，则随时刷新。</p>
+     * 使用完记得调用{@link #unregister()}DataCacheHelper.getInstance().getUserBean(self);
+     * 需添加权限 {@code <uses-permission android:name="android.permission.INTERNET"/>}DataCacheHelper.getInstance().getUserBean(self);
+     * 需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>}DataCacheHelper.getInstance().getUserBean(self);
+     * 需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>}DataCacheHelper.getInstance().getUserBean(self);
+     * 如果{@code minDistance}为0，则通过{@code minTime}来定时更新；DataCacheHelper.getInstance().getUserBean(self);
+     * {@code minDistance}不为0，则以{@code minDistance}为准；DataCacheHelper.getInstance().getUserBean(self);
+     * 两者都为0，则随时刷新。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param minTime     位置信息更新周期（单位：毫秒）
      * @param minDistance 位置变化最小距离：当位置距离变化超过此值时，将更新位置信息（单位：米）
      * @param listener    位置刷新的回调接口
-     * @return {@code true}: 初始化成功<br>{@code false}: 初始化失败
+     * @return {@code true}: 初始化成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 初始化失败
      */
     public static boolean register(long minTime, long minDistance, OnLocationChangeListener listener) {
         if (listener == null) return false;

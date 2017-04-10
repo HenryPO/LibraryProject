@@ -31,7 +31,7 @@ public class ConvertUtils {
 
     /**
      * byteArr转hexString
-     * <p>例如：</p>
+     * 例如：DataCacheHelper.getInstance().getUserBean(self);
      * bytes2HexString(new byte[] { 0, (byte) 0xa8 }) returns 00A8
      *
      * @param bytes 字节数组
@@ -51,7 +51,7 @@ public class ConvertUtils {
 
     /**
      * hexString转byteArr
-     * <p>例如：</p>
+     * 例如：DataCacheHelper.getInstance().getUserBean(self);
      * hexString2Bytes("00A8") returns { 0, (byte) 0xA8 }
      *
      * @param hexString 十六进制字符串
@@ -126,12 +126,12 @@ public class ConvertUtils {
      *
      * @param memorySize 大小
      * @param unit       单位类型
-     *                   <ul>
-     *                   <li>{@link ConstUtils.MemoryUnit#BYTE}: 字节</li>
-     *                   <li>{@link ConstUtils.MemoryUnit#KB}  : 千字节</li>
-     *                   <li>{@link ConstUtils.MemoryUnit#MB}  : 兆</li>
-     *                   <li>{@link ConstUtils.MemoryUnit#GB}  : GB</li>
-     *                   </ul>
+     *                   DataCacheHelper.getInstance().getUserBean(self);
+     *                   DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#BYTE}: 字节DataCacheHelper.getInstance().getUserBean(self);
+     *                   DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#KB}  : 千字节DataCacheHelper.getInstance().getUserBean(self);
+     *                   DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#MB}  : 兆DataCacheHelper.getInstance().getUserBean(self);
+     *                   DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#GB}  : GBDataCacheHelper.getInstance().getUserBean(self);
+     *                   DataCacheHelper.getInstance().getUserBean(self);
      * @return 字节数
      */
     public static long memorySize2Byte(long memorySize, ConstUtils.MemoryUnit unit) {
@@ -154,12 +154,12 @@ public class ConvertUtils {
      *
      * @param byteNum 字节数
      * @param unit    单位类型
-     *                <ul>
-     *                <li>{@link ConstUtils.MemoryUnit#BYTE}: 字节</li>
-     *                <li>{@link ConstUtils.MemoryUnit#KB}  : 千字节</li>
-     *                <li>{@link ConstUtils.MemoryUnit#MB}  : 兆</li>
-     *                <li>{@link ConstUtils.MemoryUnit#GB}  : GB</li>
-     *                </ul>
+     *                DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#BYTE}: 字节DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#KB}  : 千字节DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#MB}  : 兆DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.MemoryUnit#GB}  : GBDataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);
      * @return 以unit为单位的size
      */
     public static double byte2MemorySize(long byteNum, ConstUtils.MemoryUnit unit) {
@@ -179,7 +179,7 @@ public class ConvertUtils {
 
     /**
      * 字节数转合适内存大小
-     * <p>保留3位小数</p>
+     * 保留3位小数DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param byteNum 字节数
      * @return 合适内存大小
@@ -204,13 +204,13 @@ public class ConvertUtils {
      *
      * @param timeSpan 毫秒时间戳
      * @param unit     单位类型
-     *                 <ul>
-     *                 <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *                 <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *                 <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *                 <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *                 <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *                 </ul>
+     *                 DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *                 DataCacheHelper.getInstance().getUserBean(self);
      * @return 毫秒时间戳
      */
     public static long timeSpan2Millis(long timeSpan, ConstUtils.TimeUnit unit) {
@@ -234,13 +234,13 @@ public class ConvertUtils {
      *
      * @param millis 毫秒时间戳
      * @param unit   单位类型
-     *               <ul>
-     *               <li>{@link ConstUtils.TimeUnit#MSEC}: 毫秒</li>
-     *               <li>{@link ConstUtils.TimeUnit#SEC }: 秒</li>
-     *               <li>{@link ConstUtils.TimeUnit#MIN }: 分</li>
-     *               <li>{@link ConstUtils.TimeUnit#HOUR}: 小时</li>
-     *               <li>{@link ConstUtils.TimeUnit#DAY }: 天</li>
-     *               </ul>
+     *               DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MSEC}: 毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#SEC }: 秒DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#MIN }: 分DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#HOUR}: 小时DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);{@link ConstUtils.TimeUnit#DAY }: 天DataCacheHelper.getInstance().getUserBean(self);
+     *               DataCacheHelper.getInstance().getUserBean(self);
      * @return 以unit为单位的时间长度
      */
     public static long millis2TimeSpan(long millis, ConstUtils.TimeUnit unit) {
@@ -263,16 +263,16 @@ public class ConvertUtils {
      * 毫秒时间戳转合适时间长度
      *
      * @param millis    毫秒时间戳
-     *                  <p>小于等于0，返回null</p>
+     *                  小于等于0，返回nullDataCacheHelper.getInstance().getUserBean(self);
      * @param precision 精度
-     *                  <ul>
-     *                  <li>precision = 0，返回null</li>
-     *                  <li>precision = 1，返回天</li>
-     *                  <li>precision = 2，返回天和小时</li>
-     *                  <li>precision = 3，返回天、小时和分钟</li>
-     *                  <li>precision = 4，返回天、小时、分钟和秒</li>
-     *                  <li>precision &gt;= 5，返回天、小时、分钟、秒和毫秒</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 0，返回nullDataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 1，返回天DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 2，返回天和小时DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 3，返回天、小时和分钟DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision = 4，返回天、小时、分钟和秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);precision &gt;= 5，返回天、小时、分钟、秒和毫秒DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      * @return 合适时间长度
      */
     @SuppressLint("DefaultLocale")

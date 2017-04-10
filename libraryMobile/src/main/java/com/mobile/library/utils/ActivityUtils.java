@@ -26,7 +26,7 @@ public class ActivityUtils {
      * @param context     上下文
      * @param packageName 包名
      * @param className   activity全路径类名
-     * @return {@code true}: 是<br>
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
      * {@code false}: 否
      */
     public static boolean isActivityExists(Context context, String packageName, String className) {

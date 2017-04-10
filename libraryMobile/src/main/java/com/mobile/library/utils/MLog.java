@@ -34,9 +34,9 @@ public class MLog {
 
 	/**
 	 * 初始化函数
-	 * <p>
+	 *
 	 * 与{@link #getBuilder()}两者选其一
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param logSwitch
 	 *            日志总开关
@@ -44,7 +44,7 @@ public class MLog {
 	 *            日志写入文件开关，设为true需添加权限 {@code <uses-permission android:name=
 	 *            "android.permission.WRITE_EXTERNAL_STORAGE"/>}
 	 * @param logFilter
-	 *            输入日志类型有{@code v, d, i, w, e}<br>
+	 *            输入日志类型有{@code v, d, i, w, e}DataCacheHelper.getInstance().getUserBean(self);
 	 *            v代表输出所有信息，w则只输出警告...
 	 * @param tag
 	 *            标签
@@ -63,9 +63,9 @@ public class MLog {
 
 	/**
 	 * 获取LogUtils建造者
-	 * <p>
+	 *
 	 * 与{@link #init(boolean, boolean, char, String)}两者选其一
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return Builder对象
 	 */

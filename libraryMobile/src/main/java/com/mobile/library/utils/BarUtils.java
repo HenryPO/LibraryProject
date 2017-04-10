@@ -136,7 +136,7 @@ public class BarUtils {
 
     /**
      * 使状态栏半透明
-     * <p>
+     *
      * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *
      * @param activity 需要设置的activity
@@ -147,7 +147,7 @@ public class BarUtils {
 
     /**
      * 使状态栏半透明
-     * <p>
+     *
      * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *
      * @param activity       需要设置的activity
@@ -163,7 +163,7 @@ public class BarUtils {
 
     /**
      * 针对根布局是 CoordinatorLayout, 使状态栏半透明
-     * <p>
+     *
      * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *
      * @param activity       需要设置的activity
@@ -192,7 +192,7 @@ public class BarUtils {
 
     /**
      * 使状态栏透明(5.0以上半透明效果,不建议使用)
-     * <p>
+     *
      * 适用于图片作为背景的界面,此时需要图片填充到状态栏
      *
      * @param activity 需要设置的activity
@@ -615,10 +615,10 @@ public class BarUtils {
 
     /**
      * 设置透明状态栏（api大于19方可使用）
-     * <p>可在Activity的onCreat()中调用</p>
-     * <p>需在顶部控件布局中加入以下属性让内容出现在状态栏之下</p>
-     * <p>android:clipToPadding="true"</p>
-     * <p>android:fitsSystemWindows="true"</p>
+     * 可在Activity的onCreat()中调用DataCacheHelper.getInstance().getUserBean(self);
+     * 需在顶部控件布局中加入以下属性让内容出现在状态栏之下DataCacheHelper.getInstance().getUserBean(self);
+     * android:clipToPadding="true"DataCacheHelper.getInstance().getUserBean(self);
+     * android:fitsSystemWindows="true"DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param activity activity
      */
@@ -633,11 +633,11 @@ public class BarUtils {
 
     /**
      * 隐藏状态栏
-     * <p>也就是设置全屏，一定要在setContentView之前调用，否则报错</p>
-     * <p>此方法Activity可以继承AppCompatActivity</p>
-     * <p>启动的时候状态栏会显示一下再隐藏，比如QQ的欢迎界面</p>
-     * <p>在配置文件中Activity加属性android:theme="@android:style/Theme.NoTitleBar.Fullscreen"</p>
-     * <p>如加了以上配置Activity不能继承AppCompatActivity，会报错</p>
+     * 也就是设置全屏，一定要在setContentView之前调用，否则报错DataCacheHelper.getInstance().getUserBean(self);
+     * 此方法Activity可以继承AppCompatActivityDataCacheHelper.getInstance().getUserBean(self);
+     * 启动的时候状态栏会显示一下再隐藏，比如QQ的欢迎界面DataCacheHelper.getInstance().getUserBean(self);
+     * 在配置文件中Activity加属性android:theme="@android:style/Theme.NoTitleBar.Fullscreen"DataCacheHelper.getInstance().getUserBean(self);
+     * 如加了以上配置Activity不能继承AppCompatActivity，会报错DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param activity activity
      */
@@ -651,7 +651,7 @@ public class BarUtils {
      * 判断状态栏是否存在
      *
      * @param activity activity
-     * @return {@code true}: 存在<br>{@code false}: 不存在
+     * @return {@code true}: 存在DataCacheHelper.getInstance().getUserBean(self);{@code false}: 不存在
      */
     public static boolean isStatusBarExists(Activity activity) {
         WindowManager.LayoutParams params = activity.getWindow().getAttributes();

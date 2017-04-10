@@ -30,8 +30,8 @@ public class ProcessUtils {
 
     /**
      * 获取前台线程包名
-     * <p>当不是查看当前App，且SDK大于21时，
-     * 需添加权限 {@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>}</p>
+     * 当不是查看当前App，且SDK大于21时，
+     * 需添加权限 {@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 前台应用包名
      */
@@ -85,7 +85,7 @@ public class ProcessUtils {
 
     /**
      * 获取后台服务进程
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 后台服务进程
      */
@@ -101,7 +101,7 @@ public class ProcessUtils {
 
     /**
      * 杀死所有的后台服务进程
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 被暂时杀死的服务集合
      */
@@ -126,10 +126,10 @@ public class ProcessUtils {
 
     /**
      * 杀死后台服务进程
-     * <p>需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}</p>
+     * 需添加权限 {@code <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param packageName 包名
-     * @return {@code true}: 杀死成功<br>{@code false}: 杀死失败
+     * @return {@code true}: 杀死成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 杀死失败
      */
     public static boolean killBackgroundProcesses(String packageName) {
         if (StringUtil.isSpace(packageName)) return false;

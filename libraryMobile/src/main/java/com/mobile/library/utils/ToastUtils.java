@@ -23,8 +23,8 @@ public class ToastUtils {
      * 吐司初始化
      *
      * @param isJumpWhenMore 当连续弹出吐司时，是要弹出新吐司还是只修改文本内容
-     *                       <p>{@code true}: 弹出新吐司<br>{@code false}: 只修改文本内容</p>
-     *                       <p>如果为{@code false}的话可用来做显示任意时长的吐司</p>
+     *                       {@code true}: 弹出新吐司DataCacheHelper.getInstance().getUserBean(self);{@code false}: 只修改文本内容DataCacheHelper.getInstance().getUserBean(self);
+     *                       如果为{@code false}的话可用来做显示任意时长的吐司DataCacheHelper.getInstance().getUserBean(self);
      */
     public static void init(boolean isJumpWhenMore) {
         ToastUtils.isJumpWhenMore = isJumpWhenMore;

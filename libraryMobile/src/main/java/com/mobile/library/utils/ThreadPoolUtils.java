@@ -66,7 +66,7 @@ public class ThreadPoolUtils {
 
     /**
      * 在未来某个时间执行给定的命令
-     * <p>该命令可能在新的线程、已入池的线程或者正调用的线程中执行，这由 Executor 实现决定。</p>
+     * 该命令可能在新的线程、已入池的线程或者正调用的线程中执行，这由 Executor 实现决定。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param command 命令
      */
@@ -76,7 +76,7 @@ public class ThreadPoolUtils {
 
     /**
      * 在未来某个时间执行给定的命令链表
-     * <p>该命令可能在新的线程、已入池的线程或者正调用的线程中执行，这由 Executor 实现决定。</p>
+     * 该命令可能在新的线程、已入池的线程或者正调用的线程中执行，这由 Executor 实现决定。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param commands 命令链表
      */
@@ -88,8 +88,8 @@ public class ThreadPoolUtils {
 
     /**
      * 待以前提交的任务执行完毕后关闭线程池
-     * <p>启动一次顺序关闭，执行以前提交的任务，但不接受新任务。
-     * 如果已经关闭，则调用没有作用。</p>
+     * 启动一次顺序关闭，执行以前提交的任务，但不接受新任务。
+     * 如果已经关闭，则调用没有作用。DataCacheHelper.getInstance().getUserBean(self);
      */
     public void shutDown() {
         exec.shutdown();
@@ -97,8 +97,8 @@ public class ThreadPoolUtils {
 
     /**
      * 试图停止所有正在执行的活动任务
-     * <p>试图停止所有正在执行的活动任务，暂停处理正在等待的任务，并返回等待执行的任务列表。</p>
-     * <p>无法保证能够停止正在处理的活动执行任务，但是会尽力尝试。</p>
+     * 试图停止所有正在执行的活动任务，暂停处理正在等待的任务，并返回等待执行的任务列表。DataCacheHelper.getInstance().getUserBean(self);
+     * 无法保证能够停止正在处理的活动执行任务，但是会尽力尝试。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @return 等待执行的任务的列表
      */
@@ -109,7 +109,7 @@ public class ThreadPoolUtils {
     /**
      * 判断线程池是否已关闭
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public boolean isShutDown() {
         return exec.isShutdown();
@@ -117,9 +117,9 @@ public class ThreadPoolUtils {
 
     /**
      * 关闭线程池后判断所有任务是否都已完成
-     * <p>注意，除非首先调用 shutdown 或 shutdownNow，否则 isTerminated 永不为 true。</p>
+     * 注意，除非首先调用 shutdown 或 shutdownNow，否则 isTerminated 永不为 true。DataCacheHelper.getInstance().getUserBean(self);
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public boolean isTerminated() {
         return exec.isTerminated();
@@ -128,11 +128,11 @@ public class ThreadPoolUtils {
 
     /**
      * 请求关闭、发生超时或者当前线程中断
-     * <p>无论哪一个首先发生之后，都将导致阻塞，直到所有任务完成执行。</p>
+     * 无论哪一个首先发生之后，都将导致阻塞，直到所有任务完成执行。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param timeout 最长等待时间
      * @param unit    时间单位
-     * @return {@code true}: 请求成功<br>{@code false}: 请求超时
+     * @return {@code true}: 请求成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 请求超时
      * @throws InterruptedException 终端异常
      */
     public boolean awaitTermination(long timeout, TimeUnit unit) throws InterruptedException {
@@ -141,7 +141,7 @@ public class ThreadPoolUtils {
 
     /**
      * 提交一个Callable任务用于执行
-     * <p>如果想立即阻塞任务的等待，则可以使用{@code result = exec.submit(aCallable).get();}形式的构造。</p>
+     * 如果想立即阻塞任务的等待，则可以使用{@code result = exec.submit(aCallable).get();}形式的构造。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param task 任务
      * @param <T>  泛型
@@ -175,10 +175,10 @@ public class ThreadPoolUtils {
 
     /**
      * 执行给定的任务
-     * <p>当所有任务完成时，返回保持任务状态和结果的Future列表。
+     * 当所有任务完成时，返回保持任务状态和结果的Future列表。
      * 返回列表的所有元素的{@link Future#isDone}为{@code true}。
      * 注意，可以正常地或通过抛出异常来终止已完成任务。
-     * 如果正在进行此操作时修改了给定的 collection，则此方法的结果是不确定的。</p>
+     * 如果正在进行此操作时修改了给定的 collection，则此方法的结果是不确定的。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param tasks 任务集合
      * @param <T>   泛型
@@ -191,11 +191,11 @@ public class ThreadPoolUtils {
 
     /**
      * 执行给定的任务
-     * <p>当所有任务完成或超时期满时(无论哪个首先发生)，返回保持任务状态和结果的Future列表。
+     * 当所有任务完成或超时期满时(无论哪个首先发生)，返回保持任务状态和结果的Future列表。
      * 返回列表的所有元素的{@link Future#isDone}为{@code true}。
      * 一旦返回后，即取消尚未完成的任务。
      * 注意，可以正常地或通过抛出异常来终止已完成任务。
-     * 如果此操作正在进行时修改了给定的 collection，则此方法的结果是不确定的。</p>
+     * 如果此操作正在进行时修改了给定的 collection，则此方法的结果是不确定的。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param tasks   任务集合
      * @param timeout 最长等待时间
@@ -211,9 +211,9 @@ public class ThreadPoolUtils {
 
     /**
      * 执行给定的任务
-     * <p>如果某个任务已成功完成（也就是未抛出异常），则返回其结果。
+     * 如果某个任务已成功完成（也就是未抛出异常），则返回其结果。
      * 一旦正常或异常返回后，则取消尚未完成的任务。
-     * 如果此操作正在进行时修改了给定的collection，则此方法的结果是不确定的。</p>
+     * 如果此操作正在进行时修改了给定的collection，则此方法的结果是不确定的。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param tasks 任务集合
      * @param <T>   泛型
@@ -227,9 +227,9 @@ public class ThreadPoolUtils {
 
     /**
      * 执行给定的任务
-     * <p>如果在给定的超时期满前某个任务已成功完成（也就是未抛出异常），则返回其结果。
+     * 如果在给定的超时期满前某个任务已成功完成（也就是未抛出异常），则返回其结果。
      * 一旦正常或异常返回后，则取消尚未完成的任务。
-     * 如果此操作正在进行时修改了给定的collection，则此方法的结果是不确定的。</p>
+     * 如果此操作正在进行时修改了给定的collection，则此方法的结果是不确定的。DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param tasks   任务集合
      * @param timeout 最长等待时间

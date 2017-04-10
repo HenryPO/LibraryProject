@@ -30,7 +30,7 @@ public class AppUtils {
      *
      * @param context     上下文
      * @param packageName 包名
-     * @return {@code true}: 已安装<br>{@code false}: 未安装
+     * @return {@code true}: 已安装DataCacheHelper.getInstance().getUserBean(self);{@code false}: 未安装
      */
     public static boolean isInstallApp(Context context, String packageName) {
         return !StringUtil.isSpace(packageName) && IntentUtils.getLaunchAppIntent(context, packageName) != null;
@@ -82,10 +82,10 @@ public class AppUtils {
 
     /**
      * 静默安装App
-     * <p>非root需添加权限 {@code <uses-permission android:name="android.permission.INSTALL_PACKAGES" />}</p>
+     * 非root需添加权限 {@code <uses-permission android:name="android.permission.INSTALL_PACKAGES" />}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param filePath 文件路径
-     * @return {@code true}: 安装成功<br>{@code false}: 安装失败
+     * @return {@code true}: 安装成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 安装失败
      */
     public static boolean installAppSilent(String filePath) {
         File file = FileUtils.getFileByPath(filePath);
@@ -120,12 +120,12 @@ public class AppUtils {
 
     /**
      * 静默卸载App
-     * <p>非root需添加权限 {@code <uses-permission android:name="android.permission.DELETE_PACKAGES" />}</p>
+     * 非root需添加权限 {@code <uses-permission android:name="android.permission.DELETE_PACKAGES" />}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context     上下文
      * @param packageName 包名
      * @param isKeepData  是否保留数据
-     * @return {@code true}: 卸载成功<br>{@code false}: 卸载成功
+     * @return {@code true}: 卸载成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 卸载成功
      */
     public static boolean uninstallAppSilent(Context context, String packageName, boolean isKeepData) {
         if (StringUtil.isSpace(packageName)) return false;
@@ -138,7 +138,7 @@ public class AppUtils {
     /**
      * 判断App是否有root权限
      *
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isAppRoot() {
         ShellUtils.CommandResult result = ShellUtils.execCmd("echo root", true);
@@ -353,7 +353,7 @@ public class AppUtils {
      * 判断App是否是系统应用
      *
      * @param context 上下文
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSystemApp(Context context) {
         return isSystemApp(context, context.getPackageName());
@@ -364,7 +364,7 @@ public class AppUtils {
      *
      * @param context     上下文
      * @param packageName 包名
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isSystemApp(Context context, String packageName) {
         if (StringUtil.isSpace(packageName)) return false;
@@ -382,7 +382,7 @@ public class AppUtils {
      * 判断App是否是Debug版本
      *
      * @param context 上下文
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isAppDebug(Context context) {
         return isAppDebug(context, context.getPackageName());
@@ -393,7 +393,7 @@ public class AppUtils {
      *
      * @param context     上下文
      * @param packageName 包名
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isAppDebug(Context context, String packageName) {
         if (StringUtil.isSpace(packageName)) return false;
@@ -439,7 +439,7 @@ public class AppUtils {
 
     /**
      * 获取应用签名的的SHA1值
-     * <p>可据此判断高德，百度地图key是否正确</p>
+     * 可据此判断高德，百度地图key是否正确DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context 上下文
      * @return 应用签名的SHA1字符串, 比如：53:FD:54:DC:19:0F:11:AC:B5:22:9E:F1:1A:68:88:1B:8B:E8:54:42
@@ -450,7 +450,7 @@ public class AppUtils {
 
     /**
      * 获取应用签名的的SHA1值
-     * <p>可据此判断高德，百度地图key是否正确</p>
+     * 可据此判断高德，百度地图key是否正确DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context     上下文
      * @param packageName 包名
@@ -467,7 +467,7 @@ public class AppUtils {
      * 判断App是否处于前台
      *
      * @param context 上下文
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isAppForeground(Context context) {
         ActivityManager                             manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -483,12 +483,12 @@ public class AppUtils {
 
     /**
      * 判断App是否处于前台
-     * <p>当不是查看当前App，且SDK大于21时，
-     * 需添加权限 {@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>}</p>
+     * 当不是查看当前App，且SDK大于21时，
+     * 需添加权限 {@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>}DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context     上下文
      * @param packageName 包名
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isAppForeground(Context context, String packageName) {
         return !StringUtil.isSpace(packageName) && packageName.equals(ProcessUtils.getForegroundProcessName());
@@ -597,7 +597,7 @@ public class AppUtils {
 
     /**
      * 获取App信息
-     * <p>AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）</p>
+     * AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context 上下文
      * @return 当前应用的AppInfo
@@ -608,7 +608,7 @@ public class AppUtils {
 
     /**
      * 获取App信息
-     * <p>AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）</p>
+     * AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context     上下文
      * @param packageName 包名
@@ -647,8 +647,8 @@ public class AppUtils {
 
     /**
      * 获取所有已安装App信息
-     * <p>{@link #getBean(PackageManager, PackageInfo)}（名称，图标，包名，包路径，版本号，版本Code，是否系统应用）</p>
-     * <p>依赖上面的getBean方法</p>
+     * {@link #getBean(PackageManager, PackageInfo)}（名称，图标，包名，包路径，版本号，版本Code，是否系统应用）DataCacheHelper.getInstance().getUserBean(self);
+     * 依赖上面的getBean方法DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param context 上下文
      * @return 所有已安装的AppInfo列表
@@ -671,7 +671,7 @@ public class AppUtils {
      *
      * @param context  上下文
      * @param dirPaths 目录路径
-     * @return {@code true}: 成功<br>{@code false}: 失败
+     * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 失败
      */
     public static boolean cleanAppData(Context context, String... dirPaths) {
         File[] dirs = new File[dirPaths.length];
@@ -686,7 +686,7 @@ public class AppUtils {
      * 清除App所有数据
      *
      * @param dirs 目录
-     * @return {@code true}: 成功<br>{@code false}: 失败
+     * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 失败
      */
     public static boolean cleanAppData(File... dirs) {
         boolean isSuccess = CleanUtils.cleanInternalCache();

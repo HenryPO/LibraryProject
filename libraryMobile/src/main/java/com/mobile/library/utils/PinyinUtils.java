@@ -130,9 +130,9 @@ public class PinyinUtils {
 
     /**
      * 获取拼音对照表，对比过pinyin4j和其他方式，这样查表设计的好处就是读取快
-     * <p>当该类加载后会一直占有123KB的内存</p>
-     * <p>如果你想存进文件，然后读取操作的话也是可以，但速度肯定没有这样空间换时间快，毕竟现在设备内存都很大</p>
-     * <p>如需更多用法可以用pinyin4j开源库</p>
+     * 当该类加载后会一直占有123KB的内存DataCacheHelper.getInstance().getUserBean(self);
+     * 如果你想存进文件，然后读取操作的话也是可以，但速度肯定没有这样空间换时间快，毕竟现在设备内存都很大DataCacheHelper.getInstance().getUserBean(self);
+     * 如需更多用法可以用pinyin4j开源库DataCacheHelper.getInstance().getUserBean(self);
      */
     private static final String pinyinTable;
 

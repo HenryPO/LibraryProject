@@ -33,7 +33,7 @@ public class ZipUtils {
      *
      * @param resFiles    待压缩文件集合
      * @param zipFilePath 压缩文件路径
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFiles(Collection<File> resFiles, String zipFilePath)
@@ -47,7 +47,7 @@ public class ZipUtils {
      * @param resFiles    待压缩文件集合
      * @param zipFilePath 压缩文件路径
      * @param comment     压缩文件的注释
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFiles(Collection<File> resFiles, String zipFilePath, String comment)
@@ -60,7 +60,7 @@ public class ZipUtils {
      *
      * @param resFiles 待压缩文件集合
      * @param zipFile  压缩文件
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFiles(Collection<File> resFiles, File zipFile)
@@ -74,7 +74,7 @@ public class ZipUtils {
      * @param resFiles 待压缩文件集合
      * @param zipFile  压缩文件
      * @param comment  压缩文件的注释
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFiles(Collection<File> resFiles, File zipFile, String comment)
@@ -100,7 +100,7 @@ public class ZipUtils {
      *
      * @param resFilePath 待压缩文件路径
      * @param zipFilePath 压缩文件路径
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFile(String resFilePath, String zipFilePath)
@@ -114,7 +114,7 @@ public class ZipUtils {
      * @param resFilePath 待压缩文件路径
      * @param zipFilePath 压缩文件路径
      * @param comment     压缩文件的注释
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFile(String resFilePath, String zipFilePath, String comment)
@@ -127,7 +127,7 @@ public class ZipUtils {
      *
      * @param resFile 待压缩文件
      * @param zipFile 压缩文件
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFile(File resFile, File zipFile)
@@ -141,7 +141,7 @@ public class ZipUtils {
      * @param resFile 待压缩文件
      * @param zipFile 压缩文件
      * @param comment 压缩文件的注释
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     public static boolean zipFile(File resFile, File zipFile, String comment)
@@ -165,7 +165,7 @@ public class ZipUtils {
      * @param rootPath 相对于压缩文件的路径
      * @param zos      压缩文件输出流
      * @param comment  压缩文件的注释
-     * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
+     * @return {@code true}: 压缩成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
     private static boolean zipFile(File resFile, String rootPath, ZipOutputStream zos, String comment)
@@ -210,7 +210,7 @@ public class ZipUtils {
      *
      * @param zipFiles    压缩文件集合
      * @param destDirPath 目标目录路径
-     * @return {@code true}: 解压成功<br>{@code false}: 解压失败
+     * @return {@code true}: 解压成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 解压失败
      * @throws IOException IO错误时抛出
      */
     public static boolean unzipFiles(Collection<File> zipFiles, String destDirPath)
@@ -223,7 +223,7 @@ public class ZipUtils {
      *
      * @param zipFiles 压缩文件集合
      * @param destDir  目标目录
-     * @return {@code true}: 解压成功<br>{@code false}: 解压失败
+     * @return {@code true}: 解压成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 解压失败
      * @throws IOException IO错误时抛出
      */
     public static boolean unzipFiles(Collection<File> zipFiles, File destDir)
@@ -240,7 +240,7 @@ public class ZipUtils {
      *
      * @param zipFilePath 待解压文件路径
      * @param destDirPath 目标目录路径
-     * @return {@code true}: 解压成功<br>{@code false}: 解压失败
+     * @return {@code true}: 解压成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 解压失败
      * @throws IOException IO错误时抛出
      */
     public static boolean unzipFile(String zipFilePath, String destDirPath)
@@ -253,7 +253,7 @@ public class ZipUtils {
      *
      * @param zipFile 待解压文件
      * @param destDir 目标目录
-     * @return {@code true}: 解压成功<br>{@code false}: 解压失败
+     * @return {@code true}: 解压成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 解压失败
      * @throws IOException IO错误时抛出
      */
     public static boolean unzipFile(File zipFile, File destDir)

@@ -75,7 +75,7 @@ public class ServiceUtils {
      *
      * @param context   上下文
      * @param className 完整包名的服务类名
-     * @return {@code true}: 停止成功<br>{@code false}: 停止失败
+     * @return {@code true}: 停止成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 停止失败
      */
     public static boolean stopService(Context context, String className) {
         try {
@@ -91,7 +91,7 @@ public class ServiceUtils {
      *
      * @param context 上下文
      * @param cls     服务类
-     * @return {@code true}: 停止成功<br>{@code false}: 停止失败
+     * @return {@code true}: 停止成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 停止失败
      */
     public static boolean stopService(Context context, Class<?> cls) {
         Intent intent = new Intent(context, cls);
@@ -105,14 +105,14 @@ public class ServiceUtils {
      * @param className 完整包名的服务类名
      * @param conn      服务连接对象
      * @param flags     绑定选项
-     *                  <ul>
-     *                  <li>{@link Context#BIND_AUTO_CREATE}</li>
-     *                  <li>{@link Context#BIND_DEBUG_UNBIND}</li>
-     *                  <li>{@link Context#BIND_NOT_FOREGROUND}</li>
-     *                  <li>{@link Context#BIND_ABOVE_CLIENT}</li>
-     *                  <li>{@link Context#BIND_ALLOW_OOM_MANAGEMENT}</li>
-     *                  <li>{@link Context#BIND_WAIVE_PRIORITY}</li>
-     *                  </ul>
+     *                  DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_AUTO_CREATE}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_DEBUG_UNBIND}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_NOT_FOREGROUND}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_ABOVE_CLIENT}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_ALLOW_OOM_MANAGEMENT}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_WAIVE_PRIORITY}DataCacheHelper.getInstance().getUserBean(self);
+     *                  DataCacheHelper.getInstance().getUserBean(self);
      */
     public static void bindService(Context context, String className, ServiceConnection conn, int flags) {
         try {
@@ -129,14 +129,14 @@ public class ServiceUtils {
      * @param cls     服务类
      * @param conn    服务连接对象
      * @param flags   绑定选项
-     *                <ul>
-     *                <li>{@link Context#BIND_AUTO_CREATE}</li>
-     *                <li>{@link Context#BIND_DEBUG_UNBIND}</li>
-     *                <li>{@link Context#BIND_NOT_FOREGROUND}</li>
-     *                <li>{@link Context#BIND_ABOVE_CLIENT}</li>
-     *                <li>{@link Context#BIND_ALLOW_OOM_MANAGEMENT}</li>
-     *                <li>{@link Context#BIND_WAIVE_PRIORITY}</li>
-     *                </ul>
+     *                DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_AUTO_CREATE}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_DEBUG_UNBIND}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_NOT_FOREGROUND}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_ABOVE_CLIENT}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_ALLOW_OOM_MANAGEMENT}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);{@link Context#BIND_WAIVE_PRIORITY}DataCacheHelper.getInstance().getUserBean(self);
+     *                DataCacheHelper.getInstance().getUserBean(self);
      */
     public static void bindService(Context context, Class<?> cls, ServiceConnection conn, int flags) {
         Intent intent = new Intent(context, cls);
@@ -158,7 +158,7 @@ public class ServiceUtils {
      *
      * @param context   上下文
      * @param className 完整包名的服务类名
-     * @return {@code true}: 是<br>{@code false}: 否
+     * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isServiceRunning(Context context, String className) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);

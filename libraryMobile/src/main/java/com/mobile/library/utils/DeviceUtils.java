@@ -29,7 +29,7 @@ public class DeviceUtils {
 	/**
 	 * 判断设备是否root
 	 *
-	 * @return the boolean{@code true}: 是<br>
+	 * @return the boolean{@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 否
 	 */
 	public static boolean isDeviceRooted() {
@@ -65,14 +65,14 @@ public class DeviceUtils {
 
 	/**
 	 * 获取设备MAC地址
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_WIFI_STATE"/>}
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return MAC地址
 	 */
@@ -94,10 +94,10 @@ public class DeviceUtils {
 
 	/**
 	 * 获取设备MAC地址
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_WIFI_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return MAC地址
 	 */
@@ -118,10 +118,10 @@ public class DeviceUtils {
 
 	/**
 	 * 获取设备MAC地址
-	 * <p>
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return MAC地址
 	 */
@@ -169,9 +169,9 @@ public class DeviceUtils {
 
 	/**
 	 * 获取设备厂商
-	 * <p>
+	 *
 	 * 如Xiaomi
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return 设备厂商
 	 */
@@ -182,9 +182,9 @@ public class DeviceUtils {
 
 	/**
 	 * 获取设备型号
-	 * <p>
+	 *
 	 * 如MI2SC
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return 设备型号
 	 */
@@ -200,9 +200,9 @@ public class DeviceUtils {
 
 	/**
 	 * 关机
-	 * <p>
+	 *
 	 * 需要root权限或者系统权限 {@code <android:sharedUserId="android.uid.system"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static void shutdown() {
 		ShellUtils.execCmd("reboot -p", true);
@@ -214,9 +214,9 @@ public class DeviceUtils {
 
 	/**
 	 * 重启
-	 * <p>
+	 *
 	 * 需要root权限或者系统权限 {@code <android:sharedUserId="android.uid.system"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 */
 	public static void reboot() {
@@ -230,9 +230,9 @@ public class DeviceUtils {
 
 	/**
 	 * 重启
-	 * <p>
+	 *
 	 * 需系统权限 {@code <android:sharedUserId="android.uid.system"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param reason
 	 *            传递给内核来请求特殊的引导模式，如"recovery"
@@ -248,9 +248,9 @@ public class DeviceUtils {
 
 	/**
 	 * 重启到recovery
-	 * <p>
+	 *
 	 * 需要root权限
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static void reboot2Recovery() {
 		ShellUtils.execCmd("reboot recovery", true);
@@ -258,9 +258,9 @@ public class DeviceUtils {
 
 	/**
 	 * 重启到bootloader
-	 * <p>
+	 *
 	 * 需要root权限
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static void reboot2Bootloader() {
 		ShellUtils.execCmd("reboot bootloader", true);

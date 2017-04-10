@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Android Studio\\Work\\DXL\\Library\\LibraryProject\\libraryMobile\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
+        "outputFile": "D:\\Android Studio\\Work\\LibraryProject\\LibraryProject\\libraryMobile\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "D:\\Android Studio\\Work\\DXL\\Library\\LibraryProject\\libraryMobile\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\values-port\\values-port.xml",
+                    "file": "D:\\Android Studio\\Work\\LibraryProject\\LibraryProject\\libraryMobile\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

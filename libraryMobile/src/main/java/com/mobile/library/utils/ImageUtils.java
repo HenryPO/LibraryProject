@@ -774,9 +774,9 @@ public class ImageUtils {
 
 	/**
 	 * 快速模糊
-	 * <p>
+	 *
 	 * 先缩小原图，对小图进行模糊，再放大回原先尺寸
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param src
 	 *            源图片
@@ -792,9 +792,9 @@ public class ImageUtils {
 
 	/**
 	 * 快速模糊图片
-	 * <p>
+	 *
 	 * 先缩小原图，对小图进行模糊，再放大回原先尺寸
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param src
 	 *            源图片
@@ -839,9 +839,9 @@ public class ImageUtils {
 
 	/**
 	 * renderScript模糊图片
-	 * <p>
+	 *
 	 * API大于17
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param context
 	 *            上下文
@@ -1379,7 +1379,7 @@ public class ImageUtils {
 	 *            要保存到的文件路径
 	 * @param format
 	 *            格式
-	 * @return {@code true}: 成功<br>
+	 * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 失败
 	 */
 	public static boolean save(Bitmap src, String filePath, CompressFormat format) {
@@ -1395,7 +1395,7 @@ public class ImageUtils {
 	 *            要保存到的文件
 	 * @param format
 	 *            格式
-	 * @return {@code true}: 成功<br>
+	 * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 失败
 	 */
 	public static boolean save(Bitmap src, File file, CompressFormat format) {
@@ -1413,7 +1413,7 @@ public class ImageUtils {
 	 *            格式
 	 * @param recycle
 	 *            是否回收
-	 * @return {@code true}: 成功<br>
+	 * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 失败
 	 */
 	public static boolean save(Bitmap src, String filePath, CompressFormat format, boolean recycle) {
@@ -1431,7 +1431,7 @@ public class ImageUtils {
 	 *            格式
 	 * @param recycle
 	 *            是否回收
-	 * @return {@code true}: 成功<br>
+	 * @return {@code true}: 成功DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 失败
 	 */
 	public static boolean save(Bitmap src, File file, CompressFormat format, boolean recycle) {
@@ -1458,7 +1458,7 @@ public class ImageUtils {
 	 *
 	 * @param file
 	 *            文件
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 否
 	 */
 	public static boolean isImage(File file) {
@@ -1470,7 +1470,7 @@ public class ImageUtils {
 	 *
 	 * @param filePath
 	 *            文件路径
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 否
 	 */
 	public static boolean isImage(String filePath) {
@@ -1573,7 +1573,7 @@ public class ImageUtils {
 	 *
 	 * @param src
 	 *            源图片
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 * 		{@code false}: 否
 	 */
 	private static boolean isEmptyBitmap(Bitmap src) {

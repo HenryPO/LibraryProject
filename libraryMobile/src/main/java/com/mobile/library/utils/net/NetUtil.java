@@ -62,9 +62,9 @@ public class NetUtil {
 
 	/**
 	 * 打开网络设置界面
-	 * <p>
+	 *
 	 * 3.0以下打开设置界面
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static void openWirelessSettings() {
 		if (android.os.Build.VERSION.SDK_INT > 10) {
@@ -78,10 +78,10 @@ public class NetUtil {
 
 	/**
 	 * 获取活动网络信息
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_NETWORK_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return NetworkInfo
 	 */
@@ -93,12 +93,12 @@ public class NetUtil {
 
 	/**
 	 * 判断网络是否连接
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_NETWORK_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isConnected() {
@@ -108,12 +108,12 @@ public class NetUtil {
 
 	/**
 	 * 判断网络是否可用
-	 * <p>
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 可用<br>
+	 * @return {@code true}: 可用DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 不可用
 	 */
 	public static boolean isAvailableByPing() {
@@ -131,7 +131,7 @@ public class NetUtil {
 	/**
 	 * 判断移动数据是否打开
 	 *
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean getDataEnabled() {
@@ -149,13 +149,13 @@ public class NetUtil {
 
 	/**
 	 * 打开或关闭移动数据
-	 * <p>
+	 *
 	 * 需系统应用 需添加权限{@code <uses-permission android:name=
 	 * "android.permission.MODIFY_PHONE_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param enabled
-	 *            {@code true}: 打开<br>
+	 *            {@code true}: 打开DataCacheHelper.getInstance().getUserBean(self);
 	 *            {@code false}: 关闭
 	 */
 	public static void setDataEnabled(boolean enabled) {
@@ -172,12 +172,12 @@ public class NetUtil {
 
 	/**
 	 * 判断网络是否是4G
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_NETWORK_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean is4G() {
@@ -187,12 +187,12 @@ public class NetUtil {
 
 	/**
 	 * 判断wifi是否打开
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_WIFI_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean getWifiEnabled() {
@@ -202,13 +202,13 @@ public class NetUtil {
 
 	/**
 	 * 打开或关闭wifi
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.CHANGE_WIFI_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param enabled
-	 *            {@code true}: 打开<br>
+	 *            {@code true}: 打开DataCacheHelper.getInstance().getUserBean(self);
 	 *            {@code false}: 关闭
 	 */
 	public static void setWifiEnabled(boolean enabled) {
@@ -226,12 +226,12 @@ public class NetUtil {
 
 	/**
 	 * 判断wifi是否连接状态
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_NETWORK_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 连接<br>
+	 * @return {@code true}: 连接DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 未连接
 	 */
 	public static boolean isWifiConnected() {
@@ -243,16 +243,16 @@ public class NetUtil {
 
 	/**
 	 * 判断wifi数据是否可用
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_WIFI_STATE"/>}
-	 * </p>
-	 * <p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
-	 * @return {@code true}: 是<br>
+	 * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);
 	 *         {@code false}: 否
 	 */
 	public static boolean isWifiAvailable() {
@@ -261,9 +261,9 @@ public class NetUtil {
 
 	/**
 	 * 获取网络运营商名称
-	 * <p>
+	 *
 	 * 中国移动、如中国联通、中国电信
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return 运营商名称
 	 */
@@ -278,20 +278,20 @@ public class NetUtil {
 
 	/**
 	 * 获取当前网络类型
-	 * <p>
+	 *
 	 * 需添加权限 {@code <uses-permission android:name=
 	 * "android.permission.ACCESS_NETWORK_STATE"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @return 网络类型
-	 *         <ul>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_WIFI }</li>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_4G }</li>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_3G }</li>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_2G }</li>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_UNKNOWN}</li>
-	 *         <li>{@link NetUtil.NetworkType#NETWORK_NO }</li>
-	 *         </ul>
+	 *         DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_WIFI }DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_4G }DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_3G }DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_2G }DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_UNKNOWN}DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);{@link NetUtil.NetworkType#NETWORK_NO }DataCacheHelper.getInstance().getUserBean(self);
+	 *         DataCacheHelper.getInstance().getUserBean(self);
 	 */
 	public static NetworkType getNetworkType() {
 		NetworkType netType = NetworkType.NETWORK_NO;
@@ -349,10 +349,10 @@ public class NetUtil {
 
 	/**
 	 * 获取IP地址
-	 * <p>
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param useIPv4
 	 *            是否用IPv4
@@ -391,10 +391,10 @@ public class NetUtil {
 
 	/**
 	 * 获取域名ip地址
-	 * <p>
+	 *
 	 * 需添加权限
 	 * {@code <uses-permission android:name="android.permission.INTERNET"/>}
-	 * </p>
+	 * DataCacheHelper.getInstance().getUserBean(self);
 	 *
 	 * @param domain
 	 *            域名

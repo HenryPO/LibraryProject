@@ -21,7 +21,7 @@ public class EncodeUtils {
 
     /**
      * URL编码
-     * <p>若想自己指定字符集,可以使用{@link #urlEncode(String input, String charset)}方法</p>
+     * 若想自己指定字符集,可以使用{@link #urlEncode(String input, String charset)}方法DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input 要编码的字符
      * @return 编码为UTF-8的字符串
@@ -32,7 +32,7 @@ public class EncodeUtils {
 
     /**
      * URL编码
-     * <p>若系统不支持指定的编码字符集,则直接将input原样返回</p>
+     * 若系统不支持指定的编码字符集,则直接将input原样返回DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input   要编码的字符
      * @param charset 字符集
@@ -48,7 +48,7 @@ public class EncodeUtils {
 
     /**
      * URL解码
-     * <p>若想自己指定字符集,可以使用 {@link #urlDecode(String input, String charset)}方法</p>
+     * 若想自己指定字符集,可以使用 {@link #urlDecode(String input, String charset)}方法DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input 要解码的字符串
      * @return URL解码后的字符串
@@ -59,7 +59,7 @@ public class EncodeUtils {
 
     /**
      * URL解码
-     * <p>若系统不支持指定的解码字符集,则直接将input原样返回</p>
+     * 若系统不支持指定的解码字符集,则直接将input原样返回DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input   要解码的字符串
      * @param charset 字符集
@@ -125,7 +125,7 @@ public class EncodeUtils {
 
     /**
      * Base64URL安全编码
-     * <p>将Base64中的URL非法字符�?,/=转为其他字符, 见RFC3548</p>
+     * 将Base64中的URL非法字符�?,/=转为其他字符, 见RFC3548DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param input 要Base64URL安全编码的字符串
      * @return Base64URL安全编码后的字符串

@@ -139,7 +139,7 @@ public class SnackbarUtils {
 
     /**
      * 为snackbar添加布局
-     * <p>在show...Snackbar之后调用</p>
+     * 在show...Snackbar之后调用DataCacheHelper.getInstance().getUserBean(self);
      *
      * @param layoutId 布局文件
      * @param index    位置(the position at which to add the child or -1 to add last)
