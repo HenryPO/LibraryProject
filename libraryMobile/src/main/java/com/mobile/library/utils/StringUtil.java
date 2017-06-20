@@ -130,7 +130,6 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	@Deprecated
 	public static boolean isNullOrEmpty(String str) {
 		return (str == null || str.equals(""));
 	}
