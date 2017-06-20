@@ -4,6 +4,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+import com.mobile.library.Utils;
+
 /**
  * 吐司相关工具类
  * @author lihy
@@ -229,7 +231,7 @@ public class ToastUtils {
      * @param duration 显示时长
      */
     private static void showToast( int resId, int duration) {
-        showToast(Utils.getContext().getResources().getText(resId).toString(), duration);
+        showToast(Utils.getInstance().getContext().getResources().getText(resId).toString(), duration);
     }
 
     /**
@@ -240,7 +242,7 @@ public class ToastUtils {
      * @param args     参数
      */
     private static void showToast( int resId, int duration, Object... args) {
-        showToast(String.format(Utils.getContext().getResources().getString(resId), args), duration);
+        showToast(String.format(Utils.getInstance().getContext().getResources().getString(resId), args), duration);
     }
 
     /**
@@ -263,7 +265,7 @@ public class ToastUtils {
     private static void showToast(CharSequence text, int duration) {
         if (isJumpWhenMore) cancelToast();
         if (sToast == null) {
-            sToast = Toast.makeText(Utils.getContext(), text, duration);
+            sToast = Toast.makeText(Utils.getInstance().getContext(), text, duration);
         } else {
             sToast.setText(text);
             sToast.setDuration(duration);

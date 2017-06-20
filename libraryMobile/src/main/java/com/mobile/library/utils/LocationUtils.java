@@ -12,6 +12,8 @@ import android.location.LocationProvider;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import com.mobile.library.Utils;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -37,7 +39,7 @@ public class LocationUtils {
      * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isGpsEnabled() {
-        LocationManager lm = (LocationManager) Utils.getContext().getSystemService(Context.LOCATION_SERVICE);
+        LocationManager lm = (LocationManager) Utils.getInstance().getContext().getSystemService(Context.LOCATION_SERVICE);
         return lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
     }
 
@@ -47,7 +49,7 @@ public class LocationUtils {
      * @return {@code true}: 是DataCacheHelper.getInstance().getUserBean(self);{@code false}: 否
      */
     public static boolean isLocationEnabled() {
-        LocationManager lm = (LocationManager) Utils.getContext().getSystemService(Context.LOCATION_SERVICE);
+        LocationManager lm = (LocationManager) Utils.getInstance().getContext().getSystemService(Context.LOCATION_SERVICE);
         return lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER) || lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
     }
 
@@ -57,7 +59,7 @@ public class LocationUtils {
     public static void openGpsSettings() {
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        Utils.getContext().startActivity(intent);
+        Utils.getInstance().getContext().startActivity(intent);
     }
 
     /**
@@ -77,7 +79,7 @@ public class LocationUtils {
      */
     public static boolean register(long minTime, long minDistance, OnLocationChangeListener listener) {
         if (listener == null) return false;
-        mLocationManager = (LocationManager) Utils.getContext().getSystemService(Context.LOCATION_SERVICE);
+        mLocationManager = (LocationManager) Utils.getInstance().getContext().getSystemService(Context.LOCATION_SERVICE);
         mListener = listener;
         if (!isLocationEnabled()) {
             ToastUtils.showShortToastSafe("无法定位，请打开定位服务");
@@ -135,7 +137,7 @@ public class LocationUtils {
      * @return {@link Address}
      */
     public static Address getAddress(double latitude, double longitude) {
-        Geocoder geocoder = new Geocoder(Utils.getContext(), Locale.getDefault());
+        Geocoder geocoder = new Geocoder(Utils.getInstance().getContext(), Locale.getDefault());
         try {
             List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
             if (addresses.size() > 0) return addresses.get(0);

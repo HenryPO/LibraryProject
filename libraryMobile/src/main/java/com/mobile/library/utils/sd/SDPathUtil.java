@@ -2,6 +2,7 @@ package com.mobile.library.utils.sd;
 
 import android.content.Context;
 
+import com.mobile.library.Utils;
 import com.mobile.library.utils.IdGeneratorUtil;
 
 import java.io.File;
@@ -17,11 +18,7 @@ public class SDPathUtil {
     /**
      * 项目根目录名称
      */
-    private String rootName = "Mobile";
-
-    public SDPathUtil(String rootName) {
-        this.rootName = rootName;
-    }
+    private String rootName = Utils.getInstance().getAppRootName();
 
 
     /**

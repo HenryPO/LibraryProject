@@ -3,6 +3,7 @@ package com.mobile.library.http.util;
 import android.content.Context;
 
 import com.google.gson.Gson;
+import com.mobile.library.Utils;
 import com.mobile.library.http.bean.HttpPair;
 import com.mobile.library.utils.MLog;
 import com.squareup.okhttp.FormEncodingBuilder;
@@ -27,44 +28,26 @@ import java.util.concurrent.TimeUnit;
  * Http请求管理工具
  *
  * @author lihy
- * 2017-03-24
+ *         2017-03-24
  */
 public class HttpUtil {
     private Context context;
 
     private OkHttpClient client;
 
-    private static int CONNECTION_TIMEOUT = 6 * 1000;
-    private static int SO_TIMEOUT         = 6 * 1000;
-
     public HttpUtil(Context context) {
         this.context = context;
         client = new OkHttpClient();
+
+        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
+        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
+
         client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
 
     }
 
-    /**
-     * 设置连接超时
-     *
-     * @param time 时间（毫秒）
-     * @author lihy
-     * 2017-03-24
-     */
-    public void setConnectionTimeOut(int time) {
-        CONNECTION_TIMEOUT = time;
-    }
-
-    /**
-     * 设置读取超时
-     *
-     * @param time 时间（毫秒）
-     */
-    public void setSoTimeOut(int time) {
-        SO_TIMEOUT = time;
-    }
 
     /**
      * get请求
@@ -79,7 +62,7 @@ public class HttpUtil {
      */
     public <T> T get(String url, ArrayList<HttpPair> para, Type cls) {
         Gson gson = new Gson();
-        T    t    = null;
+        T t = null;
         try {
             t = gson.fromJson(get(url, para), cls);
         } catch (Exception e) {
@@ -140,6 +123,8 @@ public class HttpUtil {
         }
         MLog.i("getRequest=>", urlBuilder.toString());
 
+        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
+        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
         Request request = new Request.Builder().url(urlBuilder.toString()).build();
         client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
@@ -163,7 +148,7 @@ public class HttpUtil {
 
     public <T> T post(String url, ArrayList<HttpPair> para, Type cls) {
         Gson gson = new Gson();
-        T    t    = null;
+        T t = null;
         try {
             t = gson.fromJson(post(url, para), cls);
         } catch (Exception e) {
@@ -216,6 +201,9 @@ public class HttpUtil {
         }
 
         Request request = new Request.Builder().url(url_Str).post(formBody.build()).build();
+        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
+        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
+
         client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
@@ -237,7 +225,7 @@ public class HttpUtil {
      */
     public <T> T post(String url, String xmlData, Type cls) {
         Gson gson = new Gson();
-        T    t    = null;
+        T t = null;
         try {
             t = gson.fromJson(post(url, xmlData), cls);
         } catch (Exception e) {
@@ -285,6 +273,8 @@ public class HttpUtil {
         RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), xmlData);
 
         Request request = new Request.Builder().url(url_Str).post(body).build();
+        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
+        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
         client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
@@ -333,7 +323,7 @@ public class HttpUtil {
      */
     public Response postFileResponse(String url_Str, String key, String filePath)
             throws IOException {
-        File        file     = new File(filePath);
+        File file = new File(filePath);
         RequestBody fileBody = RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file);
         RequestBody requestBody = new MultipartBuilder().type(MultipartBuilder.FORM)
                 .addFormDataPart(key, file.getName(), fileBody).build();
@@ -342,6 +332,8 @@ public class HttpUtil {
         // new File(filePath));
 
         Request request = new Request.Builder().url(url_Str).post(requestBody).build();
+        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
+        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
         client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
         client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
@@ -359,8 +351,8 @@ public class HttpUtil {
      * 2017-03-24
      */
     private String guessMimeType(String path) {
-        FileNameMap fileNameMap    = URLConnection.getFileNameMap();
-        String      contentTypeFor = fileNameMap.getContentTypeFor(path);
+        FileNameMap fileNameMap = URLConnection.getFileNameMap();
+        String contentTypeFor = fileNameMap.getContentTypeFor(path);
         if (contentTypeFor == null) {
             contentTypeFor = "application/octet-stream";
         }

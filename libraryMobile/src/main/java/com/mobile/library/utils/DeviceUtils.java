@@ -9,6 +9,8 @@ import android.os.Build;
 import android.os.PowerManager;
 import android.provider.Settings;
 
+import com.mobile.library.Utils;
+
 import java.io.File;
 import java.net.NetworkInterface;
 import java.util.Collections;
@@ -60,7 +62,7 @@ public class DeviceUtils {
 	 */
 	@SuppressLint("HardwareIds")
 	public static String getAndroidID() {
-		return Settings.Secure.getString(Utils.getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+		return Settings.Secure.getString(Utils.getInstance().getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 	}
 
 	/**
@@ -104,7 +106,7 @@ public class DeviceUtils {
 	@SuppressLint("HardwareIds")
 	private static String getMacAddressByWifiInfo() {
 		try {
-			WifiManager wifi = (WifiManager) Utils.getContext().getSystemService(Context.WIFI_SERVICE);
+			WifiManager wifi = (WifiManager) Utils.getInstance().getContext().getSystemService(Context.WIFI_SERVICE);
 			if (wifi != null) {
 				WifiInfo info = wifi.getConnectionInfo();
 				if (info != null)
@@ -209,7 +211,7 @@ public class DeviceUtils {
 		Intent intent = new Intent("android.intent.action.ACTION_REQUEST_SHUTDOWN");
 		intent.putExtra("android.intent.extra.KEY_CONFIRM", false);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		Utils.getContext().startActivity(intent);
+		Utils.getInstance().getContext().startActivity(intent);
 	}
 
 	/**
@@ -225,7 +227,7 @@ public class DeviceUtils {
 		intent.putExtra("nowait", 1);
 		intent.putExtra("interval", 1);
 		intent.putExtra("window", 0);
-		Utils.getContext().sendBroadcast(intent);
+		Utils.getInstance().getContext().sendBroadcast(intent);
 	}
 
 	/**
@@ -238,7 +240,7 @@ public class DeviceUtils {
 	 *            传递给内核来请求特殊的引导模式，如"recovery"
 	 */
 	public static void reboot(String reason) {
-		PowerManager mPowerManager = (PowerManager) Utils.getContext().getSystemService(Context.POWER_SERVICE);
+		PowerManager mPowerManager = (PowerManager) Utils.getInstance().getContext().getSystemService(Context.POWER_SERVICE);
 		try {
 			mPowerManager.reboot(reason);
 		} catch (Exception e) {

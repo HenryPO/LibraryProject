@@ -1,8 +1,9 @@
 package com.mobile.library.utils;
 
-import java.io.File;
-
+import com.mobile.library.Utils;
 import com.mobile.library.utils.sd.SDDataUtil;
+
+import java.io.File;
 
 /**
  * 清除相关工具类
@@ -26,7 +27,7 @@ public class CleanUtils {
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalCache() {
-		return FileUtils.deleteFilesInDir(Utils.getContext().getCacheDir());
+		return FileUtils.deleteFilesInDir(Utils.getInstance().getContext().getCacheDir());
 	}
 
 	/**
@@ -39,7 +40,7 @@ public class CleanUtils {
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalFiles() {
-		return FileUtils.deleteFilesInDir(Utils.getContext().getFilesDir());
+		return FileUtils.deleteFilesInDir(Utils.getInstance().getContext().getFilesDir());
 	}
 
 	/**
@@ -52,7 +53,7 @@ public class CleanUtils {
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalDbs() {
-		return FileUtils.deleteFilesInDir(Utils.getContext().getFilesDir().getParent() + File.separator + "databases");
+		return FileUtils.deleteFilesInDir(Utils.getInstance().getContext().getFilesDir().getParent() + File.separator + "databases");
 	}
 
 	/**
@@ -67,7 +68,7 @@ public class CleanUtils {
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanInternalDbByName(String dbName) {
-		return Utils.getContext().deleteDatabase(dbName);
+		return Utils.getInstance().getContext().deleteDatabase(dbName);
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class CleanUtils {
 	 */
 	public static boolean cleanInternalSP() {
 		return FileUtils
-				.deleteFilesInDir(Utils.getContext().getFilesDir().getParent() + File.separator + "shared_prefs");
+				.deleteFilesInDir(Utils.getInstance().getContext().getFilesDir().getParent() + File.separator + "shared_prefs");
 	}
 
 	/**
@@ -94,7 +95,7 @@ public class CleanUtils {
 	 * 		{@code false}: 清除失败
 	 */
 	public static boolean cleanExternalCache() {
-		return SDDataUtil.isSDCardEnable() && FileUtils.deleteFilesInDir(Utils.getContext().getExternalCacheDir());
+		return SDDataUtil.isSDCardEnable() && FileUtils.deleteFilesInDir(Utils.getInstance().getContext().getExternalCacheDir());
 	}
 
 	/**

@@ -31,21 +31,6 @@ public class HttpHelper {
         return self;
     }
 
-    /**
-     * 设置连接超时
-     *
-     */
-    public void setConnectionTimeOut(int time) {
-        httpUtil.setConnectionTimeOut(time);
-    }
-
-    /**
-     * 设置读取超时
-     *
-     */
-    public void setSoTimeOut(int time) {
-        httpUtil.setSoTimeOut(time);
-    }
 
     public <T> T get(String url, ArrayList<HttpPair> para, Type cls) {
         return httpUtil.get(url, para, cls);

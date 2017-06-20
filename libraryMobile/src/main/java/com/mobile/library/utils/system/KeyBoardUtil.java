@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.mobile.library.utils.Utils;
+import com.mobile.library.Utils;
+
 
 /**
  * 软键盘设置
@@ -42,7 +43,7 @@ public class KeyBoardUtil {
 		edit.setFocusable(true);
 		edit.setFocusableInTouchMode(true);
 		edit.requestFocus();
-		InputMethodManager imm = (InputMethodManager) Utils.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+		InputMethodManager imm = (InputMethodManager) Utils.getInstance().getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.showSoftInput(edit, 0);
 	}
 
@@ -50,7 +51,7 @@ public class KeyBoardUtil {
 	 * 切换键盘显示与否状态
 	 */
 	public static void toggleSoftInput() {
-		InputMethodManager imm = (InputMethodManager) Utils.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+		InputMethodManager imm = (InputMethodManager) Utils.getInstance().getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
 	}
 

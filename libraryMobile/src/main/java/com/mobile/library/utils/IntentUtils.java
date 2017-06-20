@@ -10,6 +10,8 @@ import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.webkit.MimeTypeMap;
 
+import com.mobile.library.Utils;
+
 import java.io.File;
 
 /**
@@ -51,7 +53,7 @@ public class IntentUtils {
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            Uri contentUri = FileProvider.getUriForFile(Utils.getContext(), "com.your.package.fileProvider", file);
+            Uri contentUri = FileProvider.getUriForFile(Utils.getInstance().getContext(), "com.your.package.fileProvider", file);
             intent.setDataAndType(contentUri, type);
         }
         intent.setDataAndType(Uri.fromFile(file), type);
