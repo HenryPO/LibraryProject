@@ -6,3 +6,8 @@
 /build
 /captures
 /libraryMobile/build
+/libraryMobile/build/generated
+/libraryMobile/build/intermediates
+/libraryMobile/build/outputs
+/libraryMobile/build/poms
+/libraryMobile/build/tmp
