@@ -36,7 +36,7 @@ public class MLog {
      * @param msg 消息
      */
     public static void v(Object msg) {
-        log(tag, msg.toString(), null, 'i');
+        log(tag, msg.toString(), null, 'v');
     }
 
     /**
@@ -46,7 +46,7 @@ public class MLog {
      * @param msg 消息
      */
     public static void v(String tag, Object msg) {
-        log(tag, msg.toString(), null, 'i');
+        log(tag, msg.toString(), null, 'v');
     }
 
     /**
@@ -196,8 +196,10 @@ public class MLog {
                 Log.w(generateTag(tag), msg, tr);
             } else if ('d' == type && ('d' == logFilter || 'v' == logFilter)) {
                 Log.d(generateTag(tag), msg, tr);
-            } else if ('i' == type && ('d' == logFilter || 'v' == logFilter)) {
+            } else if ('i' == type && ('i' == logFilter || 'v' == logFilter)) {
                 Log.i(generateTag(tag), msg, tr);
+            } else if ('v' == type && ('v' == logFilter)) {
+                Log.v(generateTag(tag), msg, tr);
             }
             if (log2FileSwitch) {
                 log2File(type, generateTag(tag), msg + '\n' + Log.getStackTraceString(tr));

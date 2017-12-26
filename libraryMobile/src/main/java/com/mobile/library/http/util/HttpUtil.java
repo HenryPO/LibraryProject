@@ -5,14 +5,8 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.mobile.library.Utils;
 import com.mobile.library.http.bean.HttpPair;
+import com.mobile.library.http.cookie.CookiesManager;
 import com.mobile.library.utils.MLog;
-import com.squareup.okhttp.FormEncodingBuilder;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.MultipartBuilder;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +18,14 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 /**
  * Http请求管理工具
  *
@@ -34,18 +36,28 @@ public class HttpUtil {
     private Context context;
 
     private OkHttpClient client;
+    private long connectionTimeout = 0;
+    private long soTimeout = 0;
 
     public HttpUtil(Context context) {
         this.context = context;
-        client = new OkHttpClient();
+        client = getClient();
+    }
 
+    private OkHttpClient getClient() {
         long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
         long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
-
-        client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-
+        if (client == null || connectionTimeout != CONNECTION_TIMEOUT || soTimeout != SO_TIMEOUT) {
+            client = new OkHttpClient.Builder()
+                    .connectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS)
+                    .writeTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS)
+                    .readTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS)
+                    .cookieJar(new CookiesManager(context))
+                    .build();
+            connectionTimeout = CONNECTION_TIMEOUT;
+            soTimeout = SO_TIMEOUT;
+        }
+        return client;
     }
 
 
@@ -126,10 +138,7 @@ public class HttpUtil {
         long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
         long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
         Request request = new Request.Builder().url(urlBuilder.toString()).build();
-        client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        Response response = client.newCall(request).execute();
+        Response response = getClient().newCall(request).execute();
         return response;
 
     }
@@ -193,7 +202,7 @@ public class HttpUtil {
      * 2017-03-24
      */
     public Response postResponse(String url_Str, ArrayList<HttpPair> pairs) throws IOException {
-        FormEncodingBuilder formBody = new FormEncodingBuilder();
+        FormBody.Builder formBody = new FormBody.Builder();
         MLog.v("URL=" + url_Str);
         for (HttpPair pair : pairs) {
             formBody.add(pair.getName(), pair.getValue());
@@ -201,14 +210,7 @@ public class HttpUtil {
         }
 
         Request request = new Request.Builder().url(url_Str).post(formBody.build()).build();
-        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
-        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
-
-        client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        Response response = client.newCall(request).execute();
-
+        Response response = getClient().newCall(request).execute();
         return response;
     }
 
@@ -273,12 +275,7 @@ public class HttpUtil {
         RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), xmlData);
 
         Request request = new Request.Builder().url(url_Str).post(body).build();
-        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
-        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
-        client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        Response response = client.newCall(request).execute();
+        Response response = getClient().newCall(request).execute();
 
         return response;
     }
@@ -325,20 +322,11 @@ public class HttpUtil {
             throws IOException {
         File file = new File(filePath);
         RequestBody fileBody = RequestBody.create(MediaType.parse(guessMimeType(file.getName())), file);
-        RequestBody requestBody = new MultipartBuilder().type(MultipartBuilder.FORM)
+        RequestBody requestBody = new MultipartBody.Builder().setType(MultipartBody.FORM)
                 .addFormDataPart(key, file.getName(), fileBody).build();
-        // RequestBody body =
-        // RequestBody.create(MediaType.parse("text/x-markdown; charset=utf-8"),
-        // new File(filePath));
 
         Request request = new Request.Builder().url(url_Str).post(requestBody).build();
-        long CONNECTION_TIMEOUT = Utils.getInstance().getHttpConnectionTimeOut();
-        long SO_TIMEOUT = Utils.getInstance().getHttpSoTimeOut();
-        client.setConnectTimeout(CONNECTION_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setWriteTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        client.setReadTimeout(SO_TIMEOUT, TimeUnit.MILLISECONDS);
-        Response response = client.newCall(request).execute();
-
+        Response response = getClient().newCall(request).execute();
         return response;
     }
 
