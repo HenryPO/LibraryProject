@@ -26,7 +26,7 @@ apply plugin: 'com.jfrog.bintray'
 //    allLicenses = ["Apache-2.0"]
 //}
 
-version = "1.0.7"
+version = "1.0.8"
 //发布的library的版本号,这个比较关键！！！
 android {
     compileSdkVersion 25
@@ -36,8 +36,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 104
-        versionName "1.0.7"
+        versionCode 106
+        versionName "1.0.8"
     }
 
     buildTypes {
@@ -118,8 +118,8 @@ bintray {
         licenses = ["Apache-2.0"]
         publish = true
         version {
-            name = version
-            vcsTag = "1.0.7"
+            name = "1.0.8"
+            vcsTag = "1.0.8"
             desc = "Library for android"
             attributes = ['lhy-library': 'com.mobile.library']
 //            gpg {
