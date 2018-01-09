@@ -4,11 +4,12 @@ import android.content.Context;
 
 import com.mobile.library.http.bean.HttpPair;
 import com.mobile.library.http.util.HttpUtil;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
+import okhttp3.Response;
 
 /**
  * 网络模块外部调用入口

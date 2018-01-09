@@ -10,8 +10,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
 
-import com.mobile.library.Utils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,21 +82,6 @@ public class AppUtils {
         activity.startActivityForResult(IntentUtils.getInstallAppIntent(file), requestCode);
     }
 
-    /**
-     * 静默安装App
-     * 非root需添加权限 {@code <uses-permission android:name="android.permission.INSTALL_PACKAGES" />}DataCacheHelper.getInstance().getUserBean(self);
-     *
-     * @param filePath 文件路径
-     * @return {@code true}: 安装成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 安装失败
-     */
-    public static boolean installAppSilent(String filePath) {
-        File file = FileUtils.getFileByPath(filePath);
-        if (!FileUtils.isFileExists(file))
-            return false;
-        String command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm install " + filePath;
-        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(Utils.getInstance().getContext()), true);
-        return commandResult.successMsg != null && commandResult.successMsg.toLowerCase().contains("success");
-    }
 
     /**
      * 卸载App
@@ -123,23 +106,6 @@ public class AppUtils {
         if (StringUtil.isSpace(packageName))
             return;
         activity.startActivityForResult(IntentUtils.getUninstallAppIntent(packageName), requestCode);
-    }
-
-    /**
-     * 静默卸载App
-     * 非root需添加权限 {@code <uses-permission android:name="android.permission.DELETE_PACKAGES" />}DataCacheHelper.getInstance().getUserBean(self);
-     *
-     * @param context     上下文
-     * @param packageName 包名
-     * @param isKeepData  是否保留数据
-     * @return {@code true}: 卸载成功DataCacheHelper.getInstance().getUserBean(self);{@code false}: 卸载成功
-     */
-    public static boolean uninstallAppSilent(Context context, String packageName, boolean isKeepData) {
-        if (StringUtil.isSpace(packageName))
-            return false;
-        String command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm uninstall " + (isKeepData ? "-k " : "") + packageName;
-        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(context), true);
-        return commandResult.successMsg != null && commandResult.successMsg.toLowerCase().contains("success");
     }
 
 
